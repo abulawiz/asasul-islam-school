@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-arabic: 'Amiri', serif;
+
+  --color-emerald-deep: #033626;
+  --color-emerald-primary: #064e3b;
+  --color-emerald-accent: #047857;
+  --color-gold-light: #fef3c7;
+  --color-gold-accent: #c5a059;
+  --color-gold-rich: #d4af37;
+  --color-gold-dark: #9a7b2c;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #fbfbfc;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Islamic Geometric Subtile Motif */
+.bg-islamic-pattern {
+  background-color: #064e3b;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 0),
+                    radial-gradient(rgba(255, 255, 255, 0.08) 1px, #064e3b 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+.bg-pattern-subtle {
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(6, 78, 59, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(197, 160, 89, 0.35);
+}
+
+/* Glass card styling */
+.glass-emerald {
+  background: rgba(6, 78, 59, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-white {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
