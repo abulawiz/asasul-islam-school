@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  BookOpen, Sparkles, GraduationCap, Award, CheckCircle2, 
-  Clock, Calendar, Cpu, Compass, ArrowRight, Brain, Lightbulb 
+  BookOpen, GraduationCap, CheckCircle2, 
+  Cpu, Compass, ArrowRight, Brain, Lightbulb 
 } from 'lucide-react';
 import SectionHeader from '../components/common/SectionHeader';
 import { academicProgrammes } from '../data/schoolData';
 import { Link } from 'react-router-dom';
 
 export default function AcademicsPage() {
-  const [activeSection, setActiveSection] = useState('all');
-
   const subjectsPrimary = [
     "Mathematics & Numerical Reasoning",
     "English Language, Phonics & Literacy",
@@ -28,7 +26,7 @@ export default function AcademicsPage() {
     "General Mathematics & English Language",
     "Computer Studies & Data Processing",
     "Commerce, Accounting & Financial Economics",
-    "Government, Literature in English & History",
+    "Government, Literature in English & African History",
     "Advanced Arabic Language & Literature",
     "Islamic Studies & Usul-ud-Deen",
     "Tahfeez & Contextual Tafseer Studies",
@@ -60,7 +58,7 @@ export default function AcademicsPage() {
   ];
 
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen transition-colors duration-300">
       
       {/* Banner */}
       <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
@@ -73,20 +71,20 @@ export default function AcademicsPage() {
             World-Class Curriculum Rooted in Divine Wisdom
           </h1>
           <p className="mt-4 text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            Delivering the best of Cambridge International and National standards, seamlessly blended with rigorous Quranic memorization and Arabic fluency.
+            Delivering the best of Cambridge International and Nigerian National standards (NERDC/WAEC/NECO), seamlessly blended with rigorous Quranic memorization and Arabic fluency.
           </p>
         </div>
       </section>
 
       {/* 1. Academic Programmes Detailed Breakdown */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
             badge="Academic Tiers"
             arabicSubtitle="المَرَاحِلُ الدِّرَاسِيَّةُ"
             title="Comprehensive Educational Stages"
-            subtitle="Tailored to each developmental phase, ensuring academic mastery, emotional balance, and spiritual growth."
+            subtitle="Tailored to each developmental phase, ensuring academic mastery, emotional balance, and spiritual growth in Nigeria."
           />
 
           <div className="space-y-16">
@@ -96,13 +94,13 @@ export default function AcademicsPage() {
                 <div
                   key={prog.id}
                   id={prog.id}
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-sm bg-stone-50/60 ${
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-10 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm bg-stone-50/60 dark:bg-slate-900/60 ${
                     isEven ? 'lg:flex-row-reverse' : ''
                   }`}
                 >
                   {/* Image Column */}
                   <div className={`lg:col-span-5 ${isEven ? 'lg:order-2' : ''}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white">
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
                       <img
                         src={prog.image}
                         alt={prog.title}
@@ -116,24 +114,24 @@ export default function AcademicsPage() {
 
                   {/* Details Column */}
                   <div className={`lg:col-span-7 space-y-4 ${isEven ? 'lg:order-1' : ''}`}>
-                    <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold text-emerald-800 dark:text-amber-300 uppercase tracking-widest bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full">
                       Stage 0{index + 1}
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                       {prog.title}
                     </h3>
-                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                       {prog.description}
                     </p>
 
                     <div className="pt-2">
-                      <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">
+                      <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3">
                         Curricular Focus & Outcomes:
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {prog.highlights.map((item, hIdx) => (
-                          <div key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                          <div key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -143,7 +141,7 @@ export default function AcademicsPage() {
                     <div className="pt-4 flex items-center gap-4">
                       <Link
                         to="/admissions"
-                        className="px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold shadow-md transition-all flex items-center gap-1.5"
+                        className="px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white text-xs font-bold shadow-md transition-all flex items-center gap-1.5"
                       >
                         <span>Enrol for this Level</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -159,7 +157,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* 2. Primary & Secondary Subject Outlines */}
-      <section className="py-20 bg-stone-50 border-t border-slate-200">
+      <section className="py-20 bg-stone-50 dark:bg-[#071510] border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
@@ -172,21 +170,21 @@ export default function AcademicsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             
             {/* Primary Subjects */}
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center">
                   <BookOpen className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-lg text-slate-900">Primary School Core Subjects</h3>
-                  <p className="text-xs text-slate-500">Grades 1 through 6 Curriculum</p>
+                  <h3 className="font-extrabold text-lg text-slate-900 dark:text-white">Primary School Core Subjects</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Basic 1 through 6 Curriculum</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {subjectsPrimary.map((sub, i) => (
-                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 text-xs text-slate-700 font-medium border border-slate-100">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 dark:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 font-medium border border-slate-100 dark:border-slate-700/60">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                     <span>{sub}</span>
                   </div>
                 ))}
@@ -194,21 +192,21 @@ export default function AcademicsPage() {
             </div>
 
             {/* Secondary Subjects */}
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center">
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 flex items-center justify-center">
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-lg text-slate-900">Secondary School Tracks</h3>
-                  <p className="text-xs text-slate-500">Science, Commercial & Arts Streams (JSS & SSS)</p>
+                  <h3 className="font-extrabold text-lg text-slate-900 dark:text-white">Secondary School Tracks</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Science, Commercial & Arts Streams (JSS & SSS)</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {subjectsSecondary.map((sub, i) => (
-                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 text-xs text-slate-700 font-medium border border-slate-100">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 dark:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 font-medium border border-slate-100 dark:border-slate-700/60">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-600 dark:bg-amber-400"></span>
                     <span>{sub}</span>
                   </div>
                 ))}
@@ -275,7 +273,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* 4. Teaching Methodology */}
-      <section id="methodology" className="py-20 bg-white">
+      <section id="methodology" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
@@ -291,15 +289,15 @@ export default function AcademicsPage() {
               return (
                 <div
                   key={i}
-                  className="bg-stone-50 p-6 rounded-2xl border border-slate-200 hover:border-emerald-700/40 hover:shadow-lg transition-all group"
+                  className="bg-stone-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-700/40 dark:hover:border-emerald-500/40 hover:shadow-lg transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4 group-hover:bg-emerald-800 group-hover:text-amber-300 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center mb-4 group-hover:bg-emerald-800 group-hover:text-amber-300 transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-base text-slate-900 mb-2">
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">
                     {m.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     {m.description}
                   </p>
                 </div>
@@ -311,7 +309,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* 5. Learning Environment & Co-Curricular */}
-      <section className="py-20 bg-stone-50 border-t border-slate-200">
+      <section className="py-20 bg-stone-50 dark:bg-[#071510] border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="bg-gradient-to-r from-emerald-900 via-emerald-850 to-emerald-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl border border-amber-400/30 flex flex-col lg:flex-row items-center justify-between gap-8">

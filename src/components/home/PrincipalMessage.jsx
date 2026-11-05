@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Quote, ArrowRight, Award, Check } from 'lucide-react';
+import { Quote, ArrowRight, Award } from 'lucide-react';
 import { leadership } from '../../data/schoolData';
 
 export default function PrincipalMessage() {
   const principal = leadership[0];
 
   return (
-    <section className="py-20 bg-white border-b border-slate-100">
+    <section className="py-20 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="rounded-3xl bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white overflow-hidden shadow-2xl border border-amber-400/30">
@@ -45,15 +45,15 @@ export default function PrincipalMessage() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
-                "Our Solemn Pledge: Guarding Faith While Inspiring World-Class Achievement."
+                "Our Solemn Pledge: Guarding Faith While Inspiring World-Class Achievement in Nigeria."
               </h2>
 
               <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-                As-salaamu 'Alaykum wa Rahmatullah wa Barakatuh. Welcome to Asasul Islam School. Every child entrusted to our care represents a sacred trust (<em className="text-amber-200">Amanah</em>). In a rapidly modernizing world, parents often face an agonizing compromise between moral integrity and academic competitiveness.
+                As-salaamu 'Alaykum wa Rahmatullah wa Barakatuh. Welcome to Asasul Islam School. Every child entrusted to our care represents a sacred trust (<em className="text-amber-200">Amanah</em>). In a rapidly modernizing Nigerian society, parents often face an agonizing compromise between moral integrity and academic competitiveness.
               </p>
 
               <p className="text-emerald-200/90 text-sm leading-relaxed">
-                At Asasul Islam School, we prove daily that no such compromise is required. Our students dissect biological organisms in contemporary laboratories, code algorithms, and master algebra—all while carrying the words of Allah in their hearts and exhibiting exemplary Islamic adab.
+                At Asasul Islam School, we prove daily that no such compromise is required. Our Nigerian students dissect biological organisms in contemporary laboratories, code algorithms, and master algebra—all while carrying the words of Allah in their hearts and exhibiting exemplary Islamic adab.
               </p>
 
               {/* Principal's credentials bullet */}

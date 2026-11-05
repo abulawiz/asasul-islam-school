@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, Filter, Sparkles, Image as ImageIcon } from 'lucide-react';
-import SectionHeader from '../components/common/SectionHeader';
+import { Eye } from 'lucide-react';
 import Lightbox from '../components/gallery/Lightbox';
 import { galleryItems } from '../data/schoolData';
 
@@ -15,8 +14,7 @@ export default function GalleryPage() {
     'Tahfeez & Islamic Life',
     'STEM & Laboratories',
     'Classroom Activities',
-    'Sports & Athletics',
-    'Events & Celebrations'
+    'Sports & Athletics'
   ];
 
   const filteredItems = galleryItems.filter((item) => {
@@ -38,7 +36,7 @@ export default function GalleryPage() {
   };
 
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen transition-colors duration-300">
       
       {/* Banner */}
       <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
@@ -51,7 +49,7 @@ export default function GalleryPage() {
             School Activities & Campus Life Gallery
           </h1>
           <p className="mt-4 text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            Take a visual tour through our daily routines, learning moments, laboratory experiments, sports competitions, and Qur'an recitals.
+            Take a visual tour through our Nigerian campus routines, learning moments, laboratory experiments, sports competitions, and Qur'an recitals.
           </p>
         </div>
       </section>
@@ -66,8 +64,8 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 selectedCategory === cat
-                  ? 'bg-emerald-800 text-white shadow-md'
-                  : 'bg-white text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200'
+                  ? 'bg-emerald-800 dark:bg-emerald-700 text-white shadow-md'
+                  : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-900 dark:hover:text-amber-300 border border-slate-200 dark:border-slate-800'
               }`}
             >
               {cat}
@@ -81,7 +79,7 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => openLightbox(idx)}
-              className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 bg-black"
+              className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-black"
             >
               <img
                 src={item.image}

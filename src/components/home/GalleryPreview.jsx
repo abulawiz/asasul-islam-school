@@ -25,14 +25,14 @@ export default function GalleryPreview() {
   };
 
   return (
-    <section className="py-20 bg-stone-50 border-b border-slate-100">
+    <section className="py-20 bg-stone-50 dark:bg-[#071510] border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader
           badge="Moments & Memories"
           arabicSubtitle="مَعْرِضُ الصُّوَرِ"
           title="Glimpses of Vibrant Campus Life"
-          subtitle="Explore the lively atmosphere of our daily assemblies, Tajweed halaqahs, lab discoveries, and athletic triumphs."
+          subtitle="Explore the lively atmosphere of our daily assemblies, Tajweed halaqahs, lab discoveries, and athletic triumphs in Nigeria."
         />
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -40,7 +40,7 @@ export default function GalleryPreview() {
             <div
               key={item.id}
               onClick={() => openLightbox(idx)}
-              className="group relative h-48 sm:h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200"
+              className="group relative h-48 sm:h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800"
             >
               <img
                 src={item.image}
@@ -67,7 +67,7 @@ export default function GalleryPreview() {
         <div className="text-center mt-10">
           <Link
             to="/gallery"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-emerald-800 text-emerald-900 hover:text-white border border-emerald-800 font-bold text-xs sm:text-sm shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-emerald-800 dark:hover:bg-emerald-700 text-emerald-900 dark:text-amber-300 hover:text-white border border-emerald-800 dark:border-slate-700 font-bold text-xs sm:text-sm shadow-sm transition-all"
           >
             <span>Explore Complete Photo Archive</span>
             <ArrowRight className="w-4 h-4" />

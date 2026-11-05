@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
-  Calendar, MapPin, Clock, ArrowLeft, Share2, 
-  Tag, Bell, CheckCircle2, BookOpen 
+  Calendar, MapPin, Clock, ArrowLeft, Share2 
 } from 'lucide-react';
 import { newsAndEvents } from '../data/schoolData';
 
@@ -15,8 +14,8 @@ export default function NewsDetailPage() {
   if (!article) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-24 text-center">
-        <h2 className="text-2xl font-bold text-slate-800 mb-2">Article Not Found</h2>
-        <p className="text-slate-500 text-sm mb-6">The news article or announcement you are searching for does not exist or has been archived.</p>
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">Article Not Found</h2>
+        <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">The news article or announcement you are searching for does not exist or has been archived.</p>
         <Link
           to="/news"
           className="px-6 py-2.5 rounded-xl bg-emerald-800 text-white font-bold text-xs"
@@ -43,14 +42,14 @@ export default function NewsDetailPage() {
   };
 
   return (
-    <div className="bg-stone-50 min-h-screen py-12">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen py-12 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Back Navigation */}
         <div className="mb-6 flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 hover:text-emerald-950 transition"
+            className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 dark:text-amber-300 hover:text-emerald-950 dark:hover:text-amber-200 transition"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to All Announcements</span>
@@ -58,15 +57,15 @@ export default function NewsDetailPage() {
 
           <button
             onClick={handleShare}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-emerald-50 transition"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-800 transition"
           >
-            <Share2 className="w-3.5 h-3.5 text-emerald-700" />
+            <Share2 className="w-3.5 h-3.5 text-emerald-700 dark:text-amber-400" />
             <span>Share Story</span>
           </button>
         </div>
 
         {/* Article Container */}
-        <article className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+        <article className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800">
           
           {/* Hero Banner */}
           <div className="relative h-72 sm:h-96 w-full overflow-hidden">
@@ -104,33 +103,33 @@ export default function NewsDetailPage() {
           {/* Article Body */}
           <div className="p-8 sm:p-12 space-y-6">
             
-            <div className="p-4 rounded-2xl bg-emerald-50 border-l-4 border-emerald-800 text-slate-800 text-sm sm:text-base font-medium italic leading-relaxed">
+            <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border-l-4 border-emerald-800 dark:border-amber-400 text-slate-800 dark:text-slate-200 text-sm sm:text-base font-medium italic leading-relaxed">
               "{article.excerpt}"
             </div>
 
-            <div className="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+            <div className="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
               <p>{article.content}</p>
               
               <p>
-                Asasul Islam School continues to champion high-impact learning opportunities where students express both their technical rigor and authentic spiritual commitment. The administration congratulates all educators, parents, and learners actively participating in making these occasions fruitful.
+                Asasul Islam School continues to champion high-impact learning opportunities in Nigeria where students express both their technical rigor and authentic spiritual commitment. The administration congratulates all educators, parents, and learners actively participating in making these occasions fruitful.
               </p>
 
               <p>
-                For further inquiries, seat reservations, or volunteering opportunities connected to this event, please reach out to the school administrative desk via <a href="mailto:info@asasulislam.edu" className="text-emerald-800 font-bold underline">info@asasulislam.edu</a>.
+                For further inquiries, seat reservations, or volunteering opportunities connected to this event, please reach out to the school administrative desk via <a href="mailto:info@asasulislam.edu.ng" className="text-emerald-800 dark:text-amber-400 font-bold underline">info@asasulislam.edu.ng</a>.
               </p>
             </div>
 
             {/* Action Bottom */}
-            <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 to="/admissions"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs shadow-md transition text-center"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-800 hover:bg-emerald-900 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition text-center"
               >
                 Apply for 2026/2027 Admissions
               </Link>
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-5 py-3 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold text-xs transition text-center"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-xs transition text-center"
               >
                 Contact Admissions Office
               </Link>
@@ -143,7 +142,7 @@ export default function NewsDetailPage() {
         {/* Related Announcements */}
         {relatedArticles.length > 0 && (
           <div className="mt-12">
-            <h3 className="text-lg font-extrabold text-slate-900 mb-6">
+            <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-6">
               More News & Announcements
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -151,20 +150,20 @@ export default function NewsDetailPage() {
                 <Link
                   key={rel.id}
                   to={`/news/${rel.id}`}
-                  className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs hover:border-emerald-700/40 hover:shadow-md transition-all flex flex-col justify-between group"
+                  className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs hover:border-emerald-700/40 dark:hover:border-emerald-500/40 hover:shadow-md transition-all flex flex-col justify-between group"
                 >
                   <div>
-                    <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">
+                    <span className="text-[11px] font-bold text-emerald-800 dark:text-amber-300 uppercase tracking-wider block mb-1">
                       {rel.category}
                     </span>
-                    <h4 className="font-bold text-sm text-slate-900 group-hover:text-emerald-800 transition-colors mb-2">
+                    <h4 className="font-bold text-sm text-slate-900 dark:text-white group-hover:text-emerald-800 dark:group-hover:text-amber-300 transition-colors mb-2">
                       {rel.title}
                     </h4>
-                    <p className="text-xs text-slate-500 line-clamp-2">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
                       {rel.excerpt}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-slate-100 text-xs text-emerald-800 font-semibold flex items-center justify-between">
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-xs text-emerald-800 dark:text-amber-300 font-semibold flex items-center justify-between">
                     <span>{rel.date}</span>
                     <span>Read →</span>
                   </div>

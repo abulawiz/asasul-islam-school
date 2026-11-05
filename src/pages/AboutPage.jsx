@@ -1,14 +1,13 @@
 import React from 'react';
 import { 
-  History, Sparkles, Target, Compass, Award, ShieldCheck, 
-  HeartHandshake, BookOpen, Heart, Users, CheckCircle2 
+  Target, Compass, ShieldCheck, 
+  HeartHandshake, BookOpen, Heart 
 } from 'lucide-react';
 import SectionHeader from '../components/common/SectionHeader';
 import { leadership, coreValues, schoolInfo } from '../data/schoolData';
 
 const iconMap = {
   HeartHandshake: HeartHandshake,
-  Sparkles: Sparkles,
   ShieldCheck: ShieldCheck,
   BookOpen: BookOpen,
   Heart: Heart,
@@ -21,8 +20,8 @@ export default function AboutPage() {
   const milestones = [
     {
       year: "2008",
-      title: "The Vision Takes Root",
-      description: "Founded by a committee of dedicated Muslim educationists and professionals with an initial cohort of 45 pupils in pre-primary and basic classes."
+      title: "The Vision Takes Root in Nigeria",
+      description: "Founded by a committee of dedicated Nigerian Muslim educationists and professionals with an initial cohort of 45 pupils in pre-primary and basic classes."
     },
     {
       year: "2013",
@@ -37,17 +36,17 @@ export default function AboutPage() {
     {
       year: "2023",
       title: "International Benchmarking & STEM Integration",
-      description: "Integrated Cambridge IGCSE syllabi and inaugurated the Robotics & Coding Centre, graduating our 10th batch of certified Huffaz."
+      description: "Integrated Cambridge IGCSE syllabi alongside WAEC and NECO, inaugurated the Robotics & Coding Centre, graduating our 10th batch of certified Huffaz."
     },
     {
       year: "Present",
-      title: "A Beacon of Dual Scholastic Excellence",
-      description: "Over 1,200 active learners, a thriving alumni network enrolled in top global universities, and recognized as a leading Islamic institution."
+      title: "A Beacon of Dual Scholastic Excellence in West Africa",
+      description: "Over 1,200 active learners, a thriving alumni network enrolled in top Nigerian and global universities, and recognized as a leading Islamic institution."
     }
   ];
 
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen transition-colors duration-300">
       
       {/* Page Header Banner */}
       <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
@@ -60,47 +59,47 @@ export default function AboutPage() {
             Our Heritage, Values & Scholastic Vision
           </h1>
           <p className="mt-4 text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            Nurturing generations of upright, intellectually accomplished Muslims equipped with the wisdom of the Qur'an and the skills of the modern world.
+            Nurturing generations of upright, intellectually accomplished Nigerian Muslims equipped with the wisdom of the Qur'an and the skills of the modern world.
           </p>
         </div>
       </section>
 
       {/* 1. School Profile & Overview */}
-      <section id="profile" className="py-16 sm:py-20 bg-white">
+      <section id="profile" className="py-16 sm:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-6 space-y-5">
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-3.5 py-1 rounded-full border border-amber-200">
+              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest bg-amber-50 dark:bg-amber-950/60 px-3.5 py-1 rounded-full border border-amber-200 dark:border-amber-700/50">
                 Institutional Profile
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-                A Holistic Community Dedicated to Taqwa & Intellectual Rigor
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+                A Holistic Nigerian Citadel Dedicated to Taqwa & Intellectual Rigor
               </h2>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 {schoolInfo.description}
               </p>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 Our educational philosophy bridges the false dichotomy between secular proficiency and spiritual cultivation. We hold that learning mathematics, physical sciences, literature, and social sciences is an act of observing the signs of the Creator (<em>Ayatullah</em>) when conducted through an ethical framework.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-stone-50 border border-slate-200">
-                  <div className="text-2xl font-black text-emerald-800">100%</div>
-                  <div className="text-xs text-slate-600 font-medium mt-1">WAEC & NECO Pass Rate</div>
+                <div className="p-4 rounded-xl bg-stone-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <div className="text-2xl font-black text-emerald-800 dark:text-emerald-400">100%</div>
+                  <div className="text-xs text-slate-600 dark:text-slate-400 font-medium mt-1">WAEC & NECO Pass Rate</div>
                 </div>
-                <div className="p-4 rounded-xl bg-stone-50 border border-slate-200">
-                  <div className="text-2xl font-black text-amber-600">320+</div>
-                  <div className="text-xs text-slate-600 font-medium mt-1">Certified Quran Huffaz</div>
+                <div className="p-4 rounded-xl bg-stone-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <div className="text-2xl font-black text-amber-600 dark:text-amber-400">320+</div>
+                  <div className="text-xs text-slate-600 dark:text-slate-400 font-medium mt-1">Certified Quran Huffaz</div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                 <img
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop"
-                  alt="Asasul Islam School Students in Class"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
+                  alt="Asasul Islam School Nigerian Students in Class"
                   className="w-full h-[420px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
@@ -144,12 +143,8 @@ export default function AboutPage() {
                   The Vision
                 </h3>
                 <p className="text-emerald-100 text-base sm:text-lg leading-relaxed">
-                  "To be a premier global Islamic citadel of learning that produces scholarly, visionary leaders possessing uncompromising integrity, world-class academic competence, and profound devotion to Allah and the welfare of society."
+                  "To be a premier Nigerian and international citadel of learning that produces scholarly, visionary leaders possessing uncompromising integrity, world-class academic competence, and profound devotion to Allah and the welfare of society."
                 </p>
-              </div>
-              <div className="pt-6 mt-6 border-t border-emerald-800 flex items-center gap-2 text-xs text-emerald-300">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                <span>Nurturing tomorrow's ethical problem solvers</span>
               </div>
             </div>
 
@@ -167,10 +162,6 @@ export default function AboutPage() {
                   "To provide a rigorous, stimulating dual curriculum that inspires critical inquiry and scientific innovation while embedding the Noble Qur'an, prophetic character (Sunnah), and compassionate civic responsibility in every learner."
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-emerald-800 flex items-center gap-2 text-xs text-emerald-300">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                <span>Excellence in intellect, morals, and spiritual fortitude</span>
-              </div>
             </div>
 
           </div>
@@ -179,7 +170,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Core Values */}
-      <section className="py-20 bg-stone-50">
+      <section className="py-20 bg-stone-50 dark:bg-[#071510] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
@@ -195,22 +186,22 @@ export default function AboutPage() {
               return (
                 <div
                   key={val.id}
-                  className="bg-white p-7 rounded-2xl border border-slate-200 hover:border-emerald-700/40 hover:shadow-lg transition-all group"
+                  className="bg-white dark:bg-slate-900 p-7 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-700/40 dark:hover:border-emerald-500/40 hover:shadow-lg transition-all group"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-800 group-hover:text-amber-300 transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800 flex items-center justify-center group-hover:bg-emerald-800 group-hover:text-amber-300 transition-colors">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-arabic text-lg text-emerald-800 font-bold">
+                    <span className="font-arabic text-lg text-emerald-800 dark:text-amber-300 font-bold">
                       {val.arabic}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-900 transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-900 dark:group-hover:text-amber-300 transition-colors mb-2">
                     {val.title}
                   </h3>
 
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                     {val.description}
                   </p>
                 </div>
@@ -222,33 +213,33 @@ export default function AboutPage() {
       </section>
 
       {/* 4. School History Timeline */}
-      <section id="history" className="py-20 bg-white border-t border-slate-100">
+      <section id="history" className="py-20 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
             badge="Our Journey"
             arabicSubtitle="تَارِيخُ المَدْرَسَةِ"
             title="The History of Asasul Islam School"
-            subtitle="A humble beginning fueled by sincere intention, evolving into a distinguished institution of learning."
+            subtitle="A humble beginning fueled by sincere intention, evolving into a distinguished Nigerian institution of learning."
           />
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative border-l-2 border-emerald-700/30 pl-6 sm:pl-8 ml-4 sm:ml-8 space-y-12">
+            <div className="relative border-l-2 border-emerald-700/30 dark:border-emerald-500/30 pl-6 sm:pl-8 ml-4 sm:ml-8 space-y-12">
               {milestones.map((item, idx) => (
                 <div key={idx} className="relative group">
                   {/* Timeline dot */}
-                  <div className="absolute -left-[35px] sm:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-emerald-800 text-amber-300 border-4 border-white shadow-md flex items-center justify-center text-[10px] font-bold">
+                  <div className="absolute -left-[35px] sm:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-emerald-800 text-amber-300 border-4 border-white dark:border-slate-950 shadow-md flex items-center justify-center text-[10px] font-bold">
                     ✓
                   </div>
 
-                  <div className="bg-stone-50 p-6 rounded-2xl border border-slate-200/90 group-hover:border-emerald-700/40 group-hover:shadow-md transition-all">
-                    <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold uppercase tracking-wider inline-block mb-2">
+                  <div className="bg-stone-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 group-hover:border-emerald-700/40 dark:group-hover:border-emerald-500/40 group-hover:shadow-md transition-all">
+                    <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-amber-300 text-xs font-bold uppercase tracking-wider inline-block mb-2">
                       {item.year}
                     </span>
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -261,10 +252,10 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Principal's Detailed Message */}
-      <section id="principal" className="py-20 bg-stone-50 border-t border-slate-100">
+      <section id="principal" className="py-20 bg-stone-50 dark:bg-[#071510] border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12">
               
               {/* Photo & Bio Column */}
@@ -296,38 +287,38 @@ export default function AboutPage() {
 
               {/* Message Column */}
               <div className="lg:col-span-8 p-8 sm:p-12 space-y-5">
-                <div className="font-arabic text-xl text-emerald-800">
+                <div className="font-arabic text-xl text-emerald-800 dark:text-amber-300">
                   بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                   Welcome from the Principal & Director of Academics
                 </h2>
 
-                <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                   Respected Parents, Guardians, Benefactors, and Esteemed Visitors,
                 </p>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  It gives me unbounded joy to welcome you to the official portal of Asasul Islam School. As we navigate the complex currents of the twenty-first century, the responsibility of nurturing the next generation has never been more consequential. Today's youth are confronted with dizzying technological advancements alongside pervasive cultural turbulence.
+                <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+                  It gives me unbounded joy to welcome you to the official portal of Asasul Islam School. As we navigate the complex currents of Nigerian development and global technological transformation, the responsibility of nurturing the next generation has never been more consequential.
                 </p>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
                   At Asasul Islam School, we approach education not as a conveyor belt of examinations, but as a holistic cultivation of intellect, character, and spirit. We create a sanctuary where a child can develop a passion for coding, master calculus, explore molecular science, and simultaneously recite the Quran with melodious Tajweed, embodying humility and noble conduct in daily life.
                 </p>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
                   Our faculty members are not merely instructors; they are Murabbis—spiritual mentors and academic coaches who lead by exemplary conduct. Whether you are prospective parents looking for a school where your child's faith and future will both thrive, or an existing family reaffirming our partnership, we welcome you with open arms and sincere prayers.
                 </p>
 
-                <div className="pt-6 border-t border-slate-200 flex items-center justify-between">
+                <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                   <div>
-                    <div className="font-serif italic text-lg text-emerald-900 font-bold">
+                    <div className="font-serif italic text-lg text-emerald-900 dark:text-amber-300 font-bold">
                       Dr. Ustadh Ibrahim Al-Mansoor
                     </div>
-                    <div className="text-xs text-slate-500">Principal, Asasul Islam School</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Principal, Asasul Islam School</div>
                   </div>
-                  <div className="font-arabic text-emerald-800 text-base">
+                  <div className="font-arabic text-emerald-800 dark:text-amber-300 text-base">
                     والسلام عليكم ورحمة الله وبركاته
                   </div>
                 </div>
@@ -341,21 +332,21 @@ export default function AboutPage() {
       </section>
 
       {/* 6. School Leadership Team */}
-      <section id="leadership" className="py-20 bg-white">
+      <section id="leadership" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
             badge="Educational Stewardship"
             arabicSubtitle="إِدَارَةُ المَدْرَسَةِ"
             title="School Leadership & Academic Heads"
-            subtitle="Meet our dedicated team of administrators, curriculum leaders, and scholars who steer our educational standards."
+            subtitle="Meet our dedicated Nigerian administrators, curriculum leaders, and scholars who steer our educational standards."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {leadership.map((leader, idx) => (
               <div
                 key={idx}
-                className="bg-stone-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-emerald-700/40 hover:shadow-xl transition-all duration-300 flex flex-col group"
+                className="bg-stone-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-700/40 dark:hover:border-emerald-500/40 hover:shadow-xl transition-all duration-300 flex flex-col group"
               >
                 <div className="h-64 overflow-hidden relative">
                   <img
@@ -373,13 +364,13 @@ export default function AboutPage() {
 
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-bold text-base text-slate-900 group-hover:text-emerald-800 transition-colors mb-1">
+                    <h3 className="font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-800 dark:group-hover:text-amber-300 transition-colors mb-1">
                       {leader.name}
                     </h3>
-                    <p className="text-xs text-emerald-800 font-semibold mb-3">
+                    <p className="text-xs text-emerald-800 dark:text-emerald-400 font-semibold mb-3">
                       {leader.qualifications}
                     </p>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                       {leader.bio}
                     </p>
                   </div>

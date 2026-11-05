@@ -1,22 +1,22 @@
-// schoolData.js - Comprehensive structured data for ASASUL ISLAM SCHOOL
+// schoolData.js - Comprehensive structured data for ASASUL ISLAM SCHOOL (Nigeria)
 
 export const schoolInfo = {
   name: "ASASUL ISLAM SCHOOL",
   arabicName: "مَدْرَسَةُ أَسَاسِ الإِسْلاَمِ",
   tagline: "Nurturing Minds, Inspiring Character, Rooted in Faith",
-  subTagline: "Excellence in Contemporary Education & Authentic Islamic Values",
+  subTagline: "Excellence in Contemporary Nigerian & International Education with Authentic Islamic Values",
   established: "2008",
   motto: "Knowledge, Taqwa & Moral Excellence",
-  description: "Asasul Islam School is a premier educational institution committed to cultivating intellectual curiosity, spiritual fortitude, and upright moral character. We offer an integrated dual curriculum combining standard academic rigor with comprehensive Islamic and Tahfeez-ul-Qur'an studies.",
+  description: "Asasul Islam School is a premier Nigerian Islamic educational institution committed to cultivating intellectual curiosity, spiritual fortitude, and upright moral character. We offer an integrated dual curriculum combining Nigerian National (NERDC/WAEC/NECO) and Cambridge academic rigor with comprehensive Islamic and Tahfeez-ul-Qur'an studies.",
   
   contact: {
-    address: "Plot 14, Al-Nur Educational Boulevard, Phase II, New GRA (Opposite Central Islamic Center)",
-    cityState: "Education City, PMB 1042",
+    address: "Plot 14, Al-Nur Educational Boulevard, Phase II, New GRA (Opposite Central Mosque)",
+    cityState: "Abuja FCT / Keffi Corridor, PMB 1042",
     country: "Nigeria",
     phonePrimary: "+234 (0) 803 123 4567",
     phoneSecondary: "+234 (0) 708 987 6543",
-    emailAdmissions: "admissions@asasulislam.edu",
-    emailGeneral: "info@asasulislam.edu",
+    emailAdmissions: "admissions@asasulislam.edu.ng",
+    emailGeneral: "info@asasulislam.edu.ng",
     workingHours: "Monday – Thursday: 7:30 AM – 3:30 PM",
     fridayHours: "Friday: 7:30 AM – 1:00 PM (Jumu'ah Prayers)",
     weekend: "Saturday & Sunday: Closed (Tahfeez Weekend Sessions by Schedule)"
@@ -33,7 +33,7 @@ export const schoolInfo = {
   quickStats: [
     { label: "Years of Educational Service", value: "16+", icon: "Award" },
     { label: "Qualified & Caring Educators", value: "75+", icon: "Users" },
-    { label: "Active Learners Enrolled", value: "1,200+", icon: "GraduationCap" },
+    { label: "Active Nigerian Learners", value: "1,200+", icon: "GraduationCap" },
     { label: "Huffaz Graduated", value: "320+", icon: "BookOpen" },
     { label: "Modern Science & Tech Labs", value: "6", icon: "FlaskConical" },
     { label: "Average Student-Teacher Ratio", value: "15:1", icon: "Sparkles" }
@@ -44,7 +44,7 @@ export const heroSlides = [
   {
     id: 1,
     title: "Holistic Education Anchored in Faith & Innovation",
-    subtitle: "Empowering children with competitive 21st-century academic disciplines, computational literacy, and deeply ingrained Islamic ethics.",
+    subtitle: "Empowering Nigerian Muslim children with competitive 21st-century academic disciplines, computational literacy, and deeply ingrained Islamic ethics.",
     badge: "Admissions Open for 2026/2027 Academic Session",
     ctaPrimary: "Apply for Admission",
     ctaPrimaryLink: "/admissions",
@@ -55,7 +55,7 @@ export const heroSlides = [
   {
     id: 2,
     title: "Tahfeez-ul-Qur'an & Classical Arabic Mastery",
-    subtitle: "A structured, Tajweed-certified memorization and Arabic language pathway that fosters reverence and understanding of the Holy Book.",
+    subtitle: "A structured, Tajweed-certified memorization and Arabic language pathway that fosters reverence and understanding of the Holy Book in West Africa.",
     badge: "Integrated Tahfeez Programme",
     ctaPrimary: "View Programmes",
     ctaPrimaryLink: "/academics",
@@ -66,13 +66,13 @@ export const heroSlides = [
   {
     id: 3,
     title: "State-of-the-Art STEM & Science Facilities",
-    subtitle: "Inspiring future physicians, engineers, data scientists, and ethical leaders through immersive laboratory experiments and robotics.",
+    subtitle: "Inspiring future Nigerian physicians, engineers, data scientists, and ethical leaders through immersive laboratory experiments and robotics.",
     badge: "Cutting-edge STEM Labs",
     ctaPrimary: "Schedule a Campus Tour",
     ctaPrimaryLink: "/contact",
     ctaSecondary: "Our Facilities",
     ctaSecondaryLink: "/about",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop"
   }
 ];
 
@@ -109,14 +109,14 @@ export const coreValues = [
     id: "rahmah",
     title: "Rahmah (Compassion & Respect)",
     arabic: "الرَّحْمَة",
-    description: "Cultivating empathy, communal brother/sisterhood, kindness toward all of creation, and active civic responsibility.",
+    description: "Cultivating empathy, communal brotherhood, kindness toward all of creation, and active civic responsibility.",
     icon: "Heart"
   },
   {
     id: "inqiyad",
     title: "Inkishaf (Self-Discipline & Growth)",
     arabic: "الانْضِبَاط",
-    description: "Developing emotional maturity, resilience, punctuality, and self-governance required for global leadership.",
+    description: "Developing emotional maturity, resilience, punctuality, and self-governance required for Nigerian and global leadership.",
     icon: "Target"
   }
 ];
@@ -125,13 +125,13 @@ export const whyChooseUs = [
   {
     id: 1,
     title: "Harmonious Dual Curriculum",
-    description: "Rigorous modern national and international academic syllabus seamlessly blended with Islamic jurisprudence, Hadith, Seerah, and Tajweed.",
+    description: "Rigorous Nigerian national (NERDC/WAEC/NECO) and Cambridge international syllabus seamlessly blended with Islamic jurisprudence, Hadith, Seerah, and Tajweed.",
     icon: "Layers"
   },
   {
     id: 2,
     title: "Accredited Tahfeez Department",
-    description: "Specialized Quran memorization track guided by certified Huffaz with customized pacing for every child's memory retention.",
+    description: "Specialized Quran memorization track guided by certified Nigerian and Al-Azhar trained Huffaz with customized pacing for every child.",
     icon: "BookMarked"
   },
   {
@@ -155,7 +155,7 @@ export const whyChooseUs = [
   {
     id: 6,
     title: "Safe, Serene & Secure Campus",
-    description: "24/7 security surveillance, perimeter fencing, school bus transport with GPS tracking, and dedicated infirmary care.",
+    description: "24/7 security surveillance, perimeter fencing, school bus transport across major metropolitan routes, and dedicated infirmary care.",
     icon: "ShieldAlert"
   }
 ];
@@ -178,15 +178,15 @@ export const academicProgrammes = [
   },
   {
     id: "primary-school",
-    title: "Primary Education (Grade 1 – 6)",
+    title: "Primary Education (Basic 1 – 6)",
     subtitle: "Ages 6 – 11 Years | Core Foundation",
     description: "Fostering analytical thinkers, articulate communicators, and morally sound individuals through an enriched STEM, humanities, and Islamic studies syllabus.",
     highlights: [
-      "Rigorous Mathematics, English, General Science & ICT",
+      "Rigorous Mathematics, English, Basic Science & National Values",
       "Structured Tahfeez tracks with Tajweed rules",
       "Arabic grammar, conversational vocabulary & reading",
       "Islamic Studies (Tawheed, Fiqh, Seerah & Akhlaq)",
-      "Robotics, coding clubs, sports, and spelling bees"
+      "Robotics, coding clubs, sports, and Nigerian spelling bees"
     ],
     image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop",
     color: "from-teal-700 to-emerald-950"
@@ -199,26 +199,26 @@ export const academicProgrammes = [
     highlights: [
       "Basic Science, Technology, Pre-Vocational Studies & French",
       "Deepened Islamic jurisprudence & Hadith literature",
-      "Checkpoint & National BECE examination preparation",
+      "National BECE & Checkpoint examination preparation",
       "Intermediate Tahfeez with contextual Tafseer discussions",
       "Debating, leadership prefectship, and community service"
     ],
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=900&auto=format&fit=crop",
     color: "from-emerald-800 to-stone-900"
   },
   {
     id: "senior-secondary",
     title: "Senior Secondary (SSS 1 – 3 / Grades 10 – 12)",
     subtitle: "Ages 14 – 17 Years | College & Career Readiness",
-    description: "Specialized academic pathways in Pure Sciences, Arts & Humanities, and Commercial Studies designed for top university admissions worldwide.",
+    description: "Specialized academic pathways in Pure Sciences, Arts & Humanities, and Commercial Studies designed for top university admissions in Nigeria and globally.",
     highlights: [
       "Pathways: Science (Physics, Chem, Bio, Further Maths), Arts & Commercial",
-      "WAEC, NECO, UTME/JAMB & International IGCSE / SAT prep",
-      "Advanced Arabic, Islamic Civilization & World History",
+      "WAEC (WASSCE), NECO (SSCE), UTME/JAMB & International IGCSE prep",
+      "Advanced Arabic, Islamic Civilization & African History",
       "Leadership mentoring, career guidance & university counseling",
       "Graduation Capstone: Completion of selected Quran Juz' / Ijazah"
     ],
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=900&auto=format&fit=crop",
     color: "from-emerald-900 to-slate-950"
   }
 ];
@@ -226,7 +226,7 @@ export const academicProgrammes = [
 export const facilities = [
   {
     id: "masjid",
-    title: "School Masjid & Tahfeez Sanctuary",
+    title: "School Central Masjid & Tahfeez Sanctuary",
     category: "Spiritual Center",
     description: "A tranquil, air-conditioned prayer hall that accommodates all students and staff for daily congregational Zuhr, Jumu'ah khutbahs, and peaceful Quran recitation circles.",
     image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?q=80&w=900&auto=format&fit=crop",
@@ -252,8 +252,8 @@ export const facilities = [
     id: "library",
     title: "Resource Library & Media Hub",
     category: "Academic Resources",
-    description: "An extensive repository housing over 15,000 volumes across general sciences, literature, history, encyclopedias, classical Islamic texts, and audio-visual stations.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=900&auto=format&fit=crop",
+    description: "An extensive repository housing over 15,000 volumes across general sciences, literature, history, classical Islamic texts, and audio-visual stations.",
+    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=900&auto=format&fit=crop",
     features: ["15,000+ indexed books & research journals", "Quiet individual study cubicles", "Digital cataloging & e-reader tablets", "Dedicated Early Years story corner"]
   },
   {
@@ -268,7 +268,7 @@ export const facilities = [
     id: "infirmary",
     title: "Campus Health & Wellness Clinic",
     category: "Healthcare",
-    description: "Staffed by certified registered nurses offering immediate first aid, wellness check-ups, and emergency pediatric care in a clean, hygienic environment.",
+    description: "Staffed by certified registered Nigerian nurses offering immediate first aid, wellness check-ups, and emergency pediatric care in a clean, hygienic environment.",
     image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=900&auto=format&fit=crop",
     features: ["Registered medical nursing staff", "Observation beds and first aid stations", "Routine height/weight & eye screenings", "Direct liaison with referral hospitals"]
   }
@@ -278,14 +278,14 @@ export const leadership = [
   {
     name: "Dr. Ustadh Ibrahim Al-Mansoor",
     role: "Principal & Director of Academics",
-    qualifications: "Ph.D. in Educational Administration (Univ. of Malaya), B.A. Islamic Studies (Al-Azhar), PGDE",
-    bio: "With over 24 years of international leadership in Cambridge and Islamic school governance, Dr. Ibrahim oversees academic rigor, instructional quality, and faculty development.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+    qualifications: "Ph.D. in Educational Administration (ABU Zaria), B.A. Islamic Studies (Al-Azhar), PGDE",
+    bio: "With over 24 years of scholastic leadership in WAEC/NECO and Islamic school governance in Nigeria, Dr. Ibrahim oversees academic rigor, instructional quality, and faculty development.",
+    image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=600&auto=format&fit=crop"
   },
   {
     name: "Hajia Maryam Farooq",
     role: "Vice Principal (Secondary School)",
-    qualifications: "M.Ed. Curriculum Development, B.Sc. Mathematics, certified IGCSE Examiner",
+    qualifications: "M.Ed. Curriculum Studies (Univ. of Lagos), B.Sc. Mathematics, Certified WAEC/Cambridge Examiner",
     bio: "Hajia Maryam spearheads STEM initiatives, curriculum alignment, and secondary school examination success while mentoring female students in leadership.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
   },
@@ -293,14 +293,14 @@ export const leadership = [
     name: "Sheikh Abdul-Rahman Al-Baqir",
     role: "Head of Tahfeez & Islamic Sciences",
     qualifications: "Ijazah in the Ten Qira'at (Madinah Islamic Univ.), B.A. Usul-ud-Deen",
-    bio: "A renowned reciter and educator, Sheikh Abdul-Rahman has mentored over 300 Huffaz across Africa and the Middle East with pedagogical compassion and Tajweed accuracy.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
+    bio: "A renowned Nigerian reciter and educator, Sheikh Abdul-Rahman has mentored over 300 Huffaz across Nigeria and West Africa with pedagogical compassion and Tajweed accuracy.",
+    image: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?q=80&w=600&auto=format&fit=crop"
   },
   {
     name: "Mrs. Khadijah Sulaiman",
     role: "Head of Primary & Early Years",
-    qualifications: "B.Ed. Early Childhood Education, Montessori Certified Practitioner",
-    bio: "Mrs. Khadijah champions early literacy, child psychology, and playful learning environments that allow young learners to flourish with confidence and joy.",
+    qualifications: "B.Ed. Early Childhood Education (Univ. of Ibadan), Montessori Certified Practitioner",
+    bio: "Mrs. Khadijah champions early literacy, child psychology, and playful learning environments that allow young learners to flourish with confidence and Islamic adab.",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
   }
 ];
@@ -313,20 +313,20 @@ export const newsAndEvents = [
     date: "November 18, 2026",
     time: "9:00 AM – 2:00 PM",
     venue: "Main School Auditorium & Central Masjid",
-    excerpt: "Students from all four houses compete across categories in full memorization, Tajweed precision, and voice melodiousness before external Azhari judges.",
-    content: "The annual Inter-House Qur'an competition is the hallmark spiritual event on the Asasul Islam School calendar. Pupils from Grade 2 through Senior Secondary 3 will present memorized chapters before an esteemed panel of visiting scholars. Parents, community elders, and alumni are warmly invited to witness our children's devotion and mastery. Prizes and scholarships will be awarded across all tiers.",
+    excerpt: "Nigerian students from all four houses compete across categories in full memorization, Tajweed precision, and voice melodiousness before external Azhari judges.",
+    content: "The annual Inter-House Qur'an competition is the hallmark spiritual event on the Asasul Islam School calendar. Pupils from Basic 2 through Senior Secondary 3 will present memorized chapters before an esteemed panel of visiting scholars. Parents, community elders, and alumni are warmly invited to witness our children's devotion and mastery. Prizes and scholarships will be awarded across all tiers.",
     image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=1000&auto=format&fit=crop",
     featured: true
   },
   {
     id: "stem-science-fair-2026",
-    title: "Innovators of Tomorrow: Annual STEM & Science Exposition",
+    title: "Innovators of Tomorrow: Annual Nigerian STEM & Science Exposition",
     category: "Academic",
     date: "December 5, 2026",
     time: "10:00 AM – 4:00 PM",
     venue: "Science Complex & ICT Courtyard",
     excerpt: "Showcasing student-built solar prototypes, clean water filtration models, AI plant disease detectors, and automated Islamic prayer reminder hardware.",
-    content: "As part of our commitment to experiential science learning, the 2026 STEM Fair will highlight over 60 inventive student research projects. Senior secondary science students will present functional engineering models tackling local sustainability challenges, while junior pupils showcase coding and robotic sorting projects.",
+    content: "As part of our commitment to experiential science learning in Nigeria, the 2026 STEM Fair will highlight over 60 inventive student research projects. Senior secondary science students will present functional engineering models tackling local sustainability challenges, while junior pupils showcase coding and robotic sorting projects.",
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop",
     featured: true
   },
@@ -348,7 +348,7 @@ export const newsAndEvents = [
     category: "Sports",
     date: "October 24, 2026",
     time: "Full Day",
-    venue: "Metropolitan Sports Arena",
+    venue: "Metropolitan Sports Stadium",
     excerpt: "Asasul Islam School athletes clinch 8 gold, 5 silver, and 4 bronze medals in sprint relays, high jump, and table tennis tournaments.",
     content: "Our physical education champions showcased stellar athleticism, composure, and true sportsmanship during the inter-school athletics championship. Both the junior relay team and the senior table tennis squad emerged overall state division winners. We congratulate our coaches and participating scholars for exemplifying discipline.",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1000&auto=format&fit=crop",
@@ -374,14 +374,14 @@ export const galleryItems = [
     title: "Morning Assembly & Dua Recitation",
     category: "Campus Life",
     image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop",
-    caption: "Students gathering for morning reflections, Quranic recitation, and community reminders in the central quadrangle."
+    caption: "Nigerian students gathering for morning reflections, Quranic recitation, and community reminders in the central quadrangle."
   },
   {
     id: 2,
-    title: "Quran Recitation & Tajweed Circle",
+    title: "Quran Recitation & Tajweed Halaqah",
     category: "Tahfeez & Islamic Life",
     image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=1200&auto=format&fit=crop",
-    caption: "Halaqah circles where learners master vocal articulation, Tajweed laws, and reflective contemplation of the Qur'an."
+    caption: "Halaqah circles where young learners master vocal articulation, Tajweed laws, and reflective contemplation of the Qur'an."
   },
   {
     id: 3,
@@ -392,14 +392,14 @@ export const galleryItems = [
   },
   {
     id: 4,
-    title: "Collaborative Study & Research Hub",
+    title: "Collaborative Study & Discussion Group",
     category: "Classroom Activities",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
     caption: "Students engaging in peer group problem-solving and presentation rehearsals in our multimedia classroom."
   },
   {
     id: 5,
-    title: "Junior Robotics & Coding Workshop",
+    title: "Junior Robotics & ICT Coding Workshop",
     category: "STEM & Laboratories",
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
     caption: "Hands-on programming and sensor-based robotics challenges designed to foster computational logic."
@@ -420,14 +420,14 @@ export const galleryItems = [
   },
   {
     id: 8,
-    title: "Graduation & Valedictory Ceremony",
-    category: "Events & Celebrations",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
-    caption: "Celebrating the scholarly milestones of our graduating seniors as they transition into leading universities."
+    title: "Active Classroom Hand-Raising & Engagement",
+    category: "Classroom Activities",
+    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop",
+    caption: "Enthusiastic primary pupils participating actively in mathematics and general science lectures."
   },
   {
     id: 9,
-    title: "Tranquil Campus Architecture",
+    title: "Serene Campus Architecture & Courtyard",
     category: "Campus Life",
     image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?q=80&w=1200&auto=format&fit=crop",
     caption: "Our serene campus architecture incorporating Islamic arches, green courtyards, and natural daylight."
@@ -437,8 +437,8 @@ export const galleryItems = [
 export const faqs = [
   {
     id: 1,
-    question: "What makes the Asasul Islam School dual curriculum unique?",
-    answer: "Our curriculum seamlessly harmonizes the National Curriculum and Cambridge assessment standards with an authentic, comprehensive Islamic Studies and Tahfeez-ul-Qur'an programme. Rather than treating religious studies as an afterthought, our timetable provides dedicated, unhurried periods for Tajweed, Arabic grammar, Seerah, and daily congregational prayers without compromising STEM and humanities excellence."
+    question: "What makes the Asasul Islam School dual curriculum unique in Nigeria?",
+    answer: "Our curriculum seamlessly harmonizes the Nigerian National Curriculum (NERDC), WAEC, and NECO benchmarks alongside Cambridge assessment standards and an authentic, comprehensive Islamic Studies and Tahfeez-ul-Qur'an programme. Rather than treating religious studies as an afterthought, our timetable provides dedicated, unhurried periods for Tajweed, Arabic grammar, Seerah, and daily congregational prayers without compromising STEM and humanities excellence."
   },
   {
     id: 2,
@@ -448,7 +448,7 @@ export const faqs = [
   {
     id: 3,
     question: "At what age can a child commence the Tahfeez-ul-Qur'an programme?",
-    answer: "Preparatory oral recitation begins as early as age 3 in our Nursery classes with Noorani Qaidah and short surahs from Juz' Amma. Formal structured memorization with certified Huffaz starts in Primary 1 (Grade 1). We also offer an accelerated Intensive Tahfeez track for students demonstrating exceptional retention."
+    answer: "Preparatory oral recitation begins as early as age 3 in our Nursery classes with Noorani Qaidah and short surahs from Juz' Amma. Formal structured memorization with certified Huffaz starts in Basic 1 (Grade 1). We also offer an accelerated Intensive Tahfeez track for students demonstrating exceptional retention."
   },
   {
     id: 4,
@@ -457,7 +457,7 @@ export const faqs = [
   },
   {
     id: 5,
-    question: "Are school bus transportation and lunch services available?",
+    question: "Are school bus transportation and lunch services available across Abuja and neighboring corridors?",
     answer: "Yes. We operate safe, air-conditioned bus routes covering major residential zones within the metropolis, equipped with real-time tracking and trained bus attendants. We also provide balanced, wholesome halal hot lunches prepared daily under strict hygiene standards."
   },
   {
@@ -477,18 +477,18 @@ export const admissionRequirements = [
     title: "Early Years (Playgroup, Nursery 1 & 2)",
     age: "2 – 5 Years Old",
     documents: [
-      "Copy of Birth Certificate / National ID / Passport",
+      "Copy of Birth Certificate / National ID (NIN) / Passport",
       "Recent Medical Report & Immunization Card",
       "Two (2) recent passport-sized color photographs",
       "Completed Early Childhood Developmental Checklist"
     ]
   },
   {
-    title: "Primary School (Grades 1 to 6)",
+    title: "Primary School (Basic 1 to 6)",
     age: "6 – 11 Years Old",
     documents: [
       "Certified academic reports from the previous school (last 2 terms)",
-      "Transfer certificate / Clearance letter (for Grades 2 and above)",
+      "Transfer certificate / Clearance letter (for Basic 2 and above)",
       "Birth certificate copy and 4 passport photographs",
       "Satisfactory performance in the entrance diagnostic assessment"
     ]

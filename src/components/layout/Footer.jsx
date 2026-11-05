@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle2, 
-  Heart, Shield, BookOpen, Globe
+  Phone, Mail, MapPin, Clock, CheckCircle2 
 } from 'lucide-react';
 import { schoolInfo } from '../../data/schoolData';
+
+const currentYear = 2026;
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -224,7 +225,7 @@ export default function Footer() {
 
         {/* Bottom copyright line */}
         <div className="mt-12 pt-6 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
-          <p>© {new Date().getFullYear()} ASASUL ISLAM SCHOOL. All rights reserved.</p>
+          <p>© {currentYear} ASASUL ISLAM SCHOOL. All rights reserved.</p>
           <div className="flex items-center gap-4 text-slate-400">
             <Link to="/about" className="hover:text-amber-300">Privacy Policy</Link>
             <span>•</span>

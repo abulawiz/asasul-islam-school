@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', sans-serif;
@@ -20,6 +22,12 @@
     color: #1e293b;
     background-color: #fbfbfc;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html.dark body {
+    color: #e2e8f0;
+    background-color: #05100c;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,19 +36,19 @@
   }
 }
 
-/* Islamic Geometric Subtile Motif */
+/* Islamic Geometric Subtle Motif */
 .bg-islamic-pattern {
   background-color: #064e3b;
-  background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 0),
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 0),
                     radial-gradient(rgba(255, 255, 255, 0.08) 1px, #064e3b 1px);
   background-size: 28px 28px;
   background-position: 0 0, 14px 14px;
 }
 
-.bg-pattern-subtle {
-  background-color: #ffffff;
-  background-image: radial-gradient(rgba(6, 78, 59, 0.05) 1px, transparent 0);
-  background-size: 24px 24px;
+html.dark .bg-islamic-pattern {
+  background-color: #021a12;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.18) 1px, transparent 0),
+                    radial-gradient(rgba(16, 185, 129, 0.08) 1px, #021a12 1px);
 }
 
 .gold-gradient-text {
@@ -53,15 +61,13 @@
   border-color: rgba(197, 160, 89, 0.35);
 }
 
-/* Glass card styling */
+/* Glass styling */
 .glass-emerald {
   background: rgba(6, 78, 59, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-.glass-white {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+html.dark .glass-emerald {
+  background: rgba(3, 30, 22, 0.90);
 }

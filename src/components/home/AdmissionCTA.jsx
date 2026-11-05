@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, GraduationCap, CheckCircle2, FileText, PhoneCall } from 'lucide-react';
+import { ArrowRight, GraduationCap, CheckCircle2, PhoneCall } from 'lucide-react';
 import { schoolInfo } from '../../data/schoolData';
 
 export default function AdmissionCTA() {

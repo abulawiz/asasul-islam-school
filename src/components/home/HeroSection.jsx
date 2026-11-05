@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ChevronLeft, ChevronRight, ArrowRight, Award, 
-  Users, GraduationCap, BookOpen, FlaskConical, Sparkles, CheckCircle2 
+  ChevronLeft, ChevronRight, ArrowRight, CheckCircle2 
 } from 'lucide-react';
 import { heroSlides, schoolInfo } from '../../data/schoolData';
 
@@ -80,7 +79,7 @@ export default function HeroSection() {
                   <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs sm:text-sm text-emerald-200/90 font-medium pt-1">
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                      <span>Cambridge & National Standard</span>
+                      <span>Cambridge & Nigerian WAEC/NECO Standard</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
@@ -150,9 +149,9 @@ export default function HeroSection() {
       </div>
 
       {/* Stats Bar (Overlap bottom of Hero) */}
-      <div className="relative z-30 bg-emerald-900/95 border-t border-amber-400/20 backdrop-blur-md">
+      <div className="relative z-30 bg-emerald-900/95 dark:bg-emerald-950/95 border-t border-amber-400/20 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-emerald-800/60">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-emerald-800/60 dark:divide-emerald-800/40">
             {schoolInfo.quickStats.map((stat, idx) => (
               <div key={idx} className={`text-center px-2 py-1 ${idx > 0 ? 'pt-3 sm:pt-0' : ''}`}>
                 <div className="text-2xl sm:text-3xl font-extrabold text-amber-300 font-heading">

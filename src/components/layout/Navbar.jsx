@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { 
   Menu, X, ChevronDown, GraduationCap, BookOpen, 
-  Sparkles, Award, Shield, ArrowRight, Calendar, Info, PhoneCall
+  Sparkles, Award, Shield, ArrowRight, Info, Sun, Moon
 } from 'lucide-react';
 import { schoolInfo } from '../../data/schoolData';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-
-  // Close mobile menu on location change
-  useEffect(() => {
-    setIsOpen(false);
-    setDropdownOpen(null);
-  }, [location]);
+  const { theme, toggleTheme } = useTheme();
 
   // Track scroll state for sticky elevation
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -74,8 +65,8 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-emerald-900/10' 
-        : 'bg-white border-b border-slate-100'
+        ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b border-emerald-900/10 dark:border-emerald-800/30' 
+        : 'bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800/80'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -94,17 +85,17 @@ export default function Navbar() {
 
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-lg sm:text-xl text-emerald-950 tracking-tight leading-none group-hover:text-emerald-800 transition-colors">
+                <span className="font-extrabold text-lg sm:text-xl text-emerald-950 dark:text-emerald-100 tracking-tight leading-none group-hover:text-emerald-800 dark:group-hover:text-amber-300 transition-colors">
                   ASASUL ISLAM
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300">
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-600/50">
                   EST. 2008
                 </span>
               </div>
-              <span className="text-xs font-semibold tracking-widest text-emerald-700 uppercase leading-tight mt-0.5">
-                School · International
+              <span className="text-xs font-semibold tracking-widest text-emerald-700 dark:text-emerald-400 uppercase leading-tight mt-0.5">
+                School · Nigeria
               </span>
-              <span className="font-arabic text-[11px] text-slate-500 leading-none mt-0.5">
+              <span className="font-arabic text-[11px] text-slate-500 dark:text-slate-400 leading-none mt-0.5">
                 {schoolInfo.arabicName}
               </span>
             </div>
@@ -126,13 +117,13 @@ export default function Navbar() {
                       className={({ isActive }) => `
                         px-3 py-2 rounded-lg text-sm font-semibold transition-all inline-flex items-center gap-1
                         ${isActive 
-                          ? 'text-emerald-800 bg-emerald-50/80 font-bold' 
-                          : 'text-slate-700 hover:text-emerald-800 hover:bg-slate-50'
+                          ? 'text-emerald-800 dark:text-amber-300 bg-emerald-50/80 dark:bg-emerald-950/60 font-bold' 
+                          : 'text-slate-700 dark:text-slate-200 hover:text-emerald-800 dark:hover:text-amber-300 hover:bg-slate-50 dark:hover:bg-slate-900'
                         }
                       `}
                     >
                       {link.name}
-                      <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:rotate-180 transition-transform duration-200" />
+                      <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 dark:group-hover:text-amber-300 group-hover:rotate-180 transition-transform duration-200" />
                     </NavLink>
                   </div>
                 ) : (
@@ -141,8 +132,8 @@ export default function Navbar() {
                     className={({ isActive }) => `
                       px-3 py-2 rounded-lg text-sm font-semibold transition-all inline-block
                       ${isActive 
-                        ? 'text-emerald-800 bg-emerald-50/80 font-bold' 
-                        : 'text-slate-700 hover:text-emerald-800 hover:bg-slate-50'
+                        ? 'text-emerald-800 dark:text-amber-300 bg-emerald-50/80 dark:bg-emerald-950/60 font-bold' 
+                        : 'text-slate-700 dark:text-slate-200 hover:text-emerald-800 dark:hover:text-amber-300 hover:bg-slate-50 dark:hover:bg-slate-900'
                       }
                     `}
                   >
@@ -153,16 +144,16 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {link.hasDropdown && dropdownOpen === link.name && (
                   <div className="absolute top-full left-0 w-64 pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
-                    <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 space-y-1">
+                    <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 p-2 space-y-1">
                       {link.items.map((item, idx) => {
                         const IconComponent = item.icon;
                         return (
                           <Link
                             key={idx}
                             to={item.path}
-                            className="flex items-center gap-3 p-2.5 rounded-lg text-xs font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 transition-colors group/item"
+                            className="flex items-center gap-3 p-2.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-900 dark:hover:text-amber-300 transition-colors group/item"
                           >
-                            <div className="w-7 h-7 rounded-md bg-emerald-100/60 text-emerald-800 flex items-center justify-center group-hover/item:bg-emerald-800 group-hover/item:text-amber-300 transition-colors">
+                            <div className="w-7 h-7 rounded-md bg-emerald-100/60 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center group-hover/item:bg-emerald-800 group-hover/item:text-amber-300 transition-colors">
                               <IconComponent className="w-3.5 h-3.5" />
                             </div>
                             <span>{item.name}</span>
@@ -176,8 +167,22 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right Header Action Button */}
+          {/* Right Header Action & Dark/Light Mode Toggle */}
           <div className="hidden lg:flex items-center space-x-3">
+            {/* Dark / Light Mode Switch */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle dark/light theme"
+              className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-amber-300 hover:bg-emerald-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:scale-105 active:scale-95"
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-300 animate-in spin-in-180 duration-300" />
+              ) : (
+                <Moon className="w-4 h-4 text-emerald-800 animate-in spin-in-180 duration-300" />
+              )}
+            </button>
+
             <Link
               to="/admissions"
               className="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-700 hover:to-emerald-800 shadow-md shadow-emerald-950/10 hover:shadow-emerald-900/20 active:scale-95 transition-all border border-amber-400/30 group"
@@ -187,8 +192,15 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button & Mobile Theme Toggle */}
           <div className="flex lg:hidden items-center space-x-2">
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-800"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
             <Link
               to="/admissions"
               className="px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-900 bg-amber-300 hover:bg-amber-400 transition shadow-xs"
@@ -197,7 +209,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:text-emerald-800 hover:bg-emerald-50 focus:outline-none"
+              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:text-emerald-800 dark:hover:text-amber-300 hover:bg-emerald-50 dark:hover:bg-slate-900 focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -209,7 +221,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white shadow-xl animate-in slide-in-from-top duration-200 max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-xl animate-in slide-in-from-top duration-200 max-h-[85vh] overflow-y-auto">
           <div className="px-4 pt-3 pb-6 space-y-1">
             {navLinks.map((link) => (
               <div key={link.name} className="py-1">
@@ -217,20 +229,20 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setDropdownOpen(dropdownOpen === link.name ? null : link.name)}
-                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-emerald-50 hover:text-emerald-900"
+                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-900 hover:text-emerald-900 dark:hover:text-amber-300"
                     >
                       <span>{link.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        dropdownOpen === link.name ? 'rotate-180 text-emerald-800' : 'text-slate-400'
+                        dropdownOpen === link.name ? 'rotate-180 text-emerald-800 dark:text-amber-300' : 'text-slate-400'
                       }`} />
                     </button>
 
                     {dropdownOpen === link.name && (
-                      <div className="pl-4 pr-2 py-1 space-y-1 bg-slate-50 rounded-lg mt-1 border-l-2 border-emerald-700">
+                      <div className="pl-4 pr-2 py-1 space-y-1 bg-slate-50 dark:bg-slate-900 rounded-lg mt-1 border-l-2 border-emerald-700">
                         <Link
                           to={link.path}
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-sm font-medium text-emerald-900 hover:underline"
+                          className="block px-3 py-2 text-sm font-medium text-emerald-900 dark:text-emerald-300 hover:underline"
                         >
                           Overview of {link.name} →
                         </Link>
@@ -239,7 +251,7 @@ export default function Navbar() {
                             key={sIdx}
                             to={sub.path}
                             onClick={() => setIsOpen(false)}
-                            className="block px-3 py-2 text-xs font-medium text-slate-600 hover:text-emerald-800"
+                            className="block px-3 py-2 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-amber-300"
                           >
                             {sub.name}
                           </Link>
@@ -255,7 +267,7 @@ export default function Navbar() {
                       block px-3 py-2.5 rounded-lg text-base font-semibold transition
                       ${isActive 
                         ? 'bg-emerald-800 text-white' 
-                        : 'text-slate-800 hover:bg-emerald-50 hover:text-emerald-900'
+                        : 'text-slate-800 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-900 hover:text-emerald-900 dark:hover:text-amber-300'
                       }
                     `}
                   >
@@ -265,7 +277,7 @@ export default function Navbar() {
               </div>
             ))}
 
-            <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-2.5">
+            <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2.5">
               <Link
                 to="/admissions"
                 onClick={() => setIsOpen(false)}
@@ -277,7 +289,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="w-full py-2.5 px-4 rounded-xl border border-slate-200 text-slate-700 font-semibold text-center text-sm hover:bg-slate-50 transition"
+                className="w-full py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-center text-sm hover:bg-slate-50 dark:hover:bg-slate-900 transition"
               >
                 Schedule Campus Visit
               </Link>

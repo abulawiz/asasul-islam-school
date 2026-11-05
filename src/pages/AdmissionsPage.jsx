@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { 
-  GraduationCap, CheckCircle2, FileText, ChevronDown, 
-  HelpCircle, AlertCircle, Clock, ShieldCheck, Download, Send, Check 
+  CheckCircle2, ChevronDown, Send, Check, FileText 
 } from 'lucide-react';
 import SectionHeader from '../components/common/SectionHeader';
-import { faqs, admissionRequirements, admissionSteps, schoolInfo } from '../data/schoolData';
+import { faqs, admissionRequirements, admissionSteps } from '../data/schoolData';
 
 export default function AdmissionsPage() {
   // FAQ accordion state
@@ -98,7 +97,7 @@ export default function AdmissionsPage() {
   };
 
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen transition-colors duration-300">
       
       {/* Page Header */}
       <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
@@ -111,13 +110,13 @@ export default function AdmissionsPage() {
             Begin Your Child's Journey of Excellence
           </h1>
           <p className="mt-4 text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            We welcome families who seek balanced, high-standard contemporary academics unified with authentic Islamic values and Quranic memorization.
+            We welcome Nigerian and international families who seek balanced, high-standard contemporary academics unified with authentic Islamic values and Quranic memorization.
           </p>
         </div>
       </section>
 
       {/* 1. Admission Procedures & Steps */}
-      <section id="procedures" className="py-20 bg-white">
+      <section id="procedures" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
@@ -131,20 +130,20 @@ export default function AdmissionsPage() {
             {admissionSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-stone-50 p-6 rounded-2xl border border-slate-200/90 hover:border-emerald-700/50 hover:shadow-lg transition-all group relative flex flex-col justify-between"
+                className="bg-stone-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 hover:border-emerald-700/50 dark:hover:border-emerald-500/50 hover:shadow-lg transition-all group relative flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-800 text-amber-300 font-extrabold font-heading text-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform shadow-sm">
                     {step.step}
                   </div>
-                  <h3 className="font-bold text-lg text-slate-900 mb-2">
+                  <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-1.5 text-xs font-semibold text-emerald-800">
+                <div className="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center gap-1.5 text-xs font-semibold text-emerald-800 dark:text-amber-400">
                   <Check className="w-4 h-4 text-amber-500" />
                   <span>Step {idx + 1} of 4</span>
                 </div>
@@ -156,46 +155,46 @@ export default function AdmissionsPage() {
       </section>
 
       {/* 2. Admission Requirements by Level */}
-      <section id="requirements" className="py-20 bg-stone-50 border-t border-slate-200">
+      <section id="requirements" className="py-20 bg-stone-50 dark:bg-[#071510] border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
             badge="Checklist"
             arabicSubtitle="شُرُوطُ وَمُتَطَلَّبَاتُ القُبُولِ"
             title="Entry Requirements & Document Checklist"
-            subtitle="Please review the age criteria and mandatory scholastic documents required for enrollment."
+            subtitle="Please review the age criteria and mandatory Nigerian scholastic documents required for enrollment."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {admissionRequirements.map((req, idx) => (
               <div
                 key={idx}
-                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-emerald-700/40 transition-all"
+                className="bg-white dark:bg-slate-900 p-7 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-emerald-700/40 dark:hover:border-emerald-500/40 transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold border border-amber-200">
+                    <span className="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-bold border border-amber-200 dark:border-amber-700/50">
                       {req.age}
                     </span>
-                    <span className="text-xs font-bold text-emerald-800">Tier 0{idx + 1}</span>
+                    <span className="text-xs font-bold text-emerald-800 dark:text-amber-400">Tier 0{idx + 1}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
                     {req.title}
                   </h3>
 
                   <div className="space-y-3">
                     {req.documents.map((doc, dIdx) => (
-                      <div key={dIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                      <div key={dIdx} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5" />
                         <span className="leading-relaxed">{doc}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500 flex items-center gap-1">
-                  <FileText className="w-3.5 h-3.5 text-emerald-700" />
+                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                  <FileText className="w-3.5 h-3.5 text-emerald-700 dark:text-amber-400" />
                   <span>Submit physical or digital copies upon request</span>
                 </div>
               </div>
@@ -206,7 +205,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* 3. Comprehensive Application Form Interface */}
-      <section id="apply" className="py-20 bg-white border-t border-slate-200">
+      <section id="apply" className="py-20 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
@@ -216,20 +215,20 @@ export default function AdmissionsPage() {
             subtitle="Fill out the preliminary enrollment application. Our admissions office will process your submission and contact you within 2 business days."
           />
 
-          <div className="bg-stone-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+          <div className="bg-stone-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl">
             
             <form onSubmit={handleSubmit} className="space-y-8">
               
               {/* Section 1: Student Information */}
               <div>
-                <h3 className="text-base font-extrabold text-emerald-950 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 flex items-center gap-2">
+                <h3 className="text-base font-extrabold text-emerald-950 dark:text-amber-300 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 dark:border-slate-800 flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">1</span>
                   <span>Student Bio & Class Preference</span>
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Student First Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -238,10 +237,10 @@ export default function AdmissionsPage() {
                       value={formData.studentFirstName}
                       onChange={handleInputChange}
                       placeholder="e.g. Zayd"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.studentFirstName 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.studentFirstName && (
@@ -250,7 +249,7 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Student Last / Family Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -259,10 +258,10 @@ export default function AdmissionsPage() {
                       value={formData.studentLastName}
                       onChange={handleInputChange}
                       placeholder="e.g. Al-Mansoor"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.studentLastName 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.studentLastName && (
@@ -271,7 +270,7 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Date of Birth <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -279,10 +278,10 @@ export default function AdmissionsPage() {
                       name="dateOfBirth"
                       value={formData.dateOfBirth}
                       onChange={handleInputChange}
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.dateOfBirth 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.dateOfBirth && (
@@ -291,14 +290,14 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Gender <span className="text-red-500">*</span>
                     </label>
                     <select
                       name="gender"
                       value={formData.gender}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                     >
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -306,21 +305,21 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Grade / Level Applying For <span className="text-red-500">*</span>
                     </label>
                     <select
                       name="gradeApplying"
                       value={formData.gradeApplying}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                     >
                       <option value="Playgroup / Creche (Ages 2-3)">Playgroup / Creche (Ages 2-3)</option>
                       <option value="Nursery 1 & 2 (Ages 3-5)">Nursery 1 & 2 (Ages 3-5)</option>
-                      <option value="Primary 1 (Grade 1)">Primary 1 (Grade 1)</option>
-                      <option value="Primary 2 (Grade 2)">Primary 2 (Grade 2)</option>
-                      <option value="Primary 3 - 5">Primary 3 - 5</option>
-                      <option value="Primary 6 / Pre-Junior">Primary 6 / Pre-Junior</option>
+                      <option value="Basic 1 (Primary 1)">Basic 1 (Primary 1)</option>
+                      <option value="Basic 2 (Primary 2)">Basic 2 (Primary 2)</option>
+                      <option value="Basic 3 - 5">Basic 3 - 5</option>
+                      <option value="Basic 6 / Pre-Junior">Basic 6 / Pre-Junior</option>
                       <option value="Junior Secondary 1 (JSS 1)">Junior Secondary 1 (JSS 1)</option>
                       <option value="Junior Secondary 2 - 3">Junior Secondary 2 - 3</option>
                       <option value="Senior Secondary 1 (SSS 1 - Science)">Senior Secondary 1 (SSS 1 - Science)</option>
@@ -329,14 +328,14 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Tahfeez Stream Preference
                     </label>
                     <select
                       name="tahfeezPreference"
                       value={formData.tahfeezPreference}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                     >
                       <option value="Integrated Standard Tahfeez">Integrated Standard Tahfeez (Curriculum-aligned)</option>
                       <option value="Accelerated Intensive Huffaz Track">Accelerated Intensive Huffaz Track (Morning & Weekend)</option>
@@ -344,7 +343,7 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div className="sm:col-span-2">
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Previous School Attended (if applicable)
                     </label>
                     <input
@@ -353,23 +352,22 @@ export default function AdmissionsPage() {
                       value={formData.previousSchool}
                       onChange={handleInputChange}
                       placeholder="Name and city of previous educational institution"
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
-                    >
-                    </input>
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                    />
                   </div>
                 </div>
               </div>
 
               {/* Section 2: Parent / Guardian Information */}
               <div>
-                <h3 className="text-base font-extrabold text-emerald-950 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 flex items-center gap-2">
+                <h3 className="text-base font-extrabold text-emerald-950 dark:text-amber-300 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 dark:border-slate-800 flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">2</span>
                   <span>Parent / Guardian Contact Information</span>
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Parent / Guardian Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -378,10 +376,10 @@ export default function AdmissionsPage() {
                       value={formData.parentName}
                       onChange={handleInputChange}
                       placeholder="e.g. Alhaji Mansoor Sani"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.parentName 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.parentName && (
@@ -390,14 +388,14 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Relationship to Student <span className="text-red-500">*</span>
                     </label>
                     <select
                       name="parentRelationship"
                       value={formData.parentRelationship}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                     >
                       <option value="Father">Father</option>
                       <option value="Mother">Mother</option>
@@ -406,8 +404,8 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
-                      Primary Phone Number <span className="text-red-500">*</span>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Primary Phone Number (Nigeria) <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -415,10 +413,10 @@ export default function AdmissionsPage() {
                       value={formData.parentPhone}
                       onChange={handleInputChange}
                       placeholder="e.g. +234 803 000 0000"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.parentPhone 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.parentPhone && (
@@ -427,7 +425,7 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -436,10 +434,10 @@ export default function AdmissionsPage() {
                       value={formData.parentEmail}
                       onChange={handleInputChange}
                       placeholder="e.g. guardian@example.com"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.parentEmail 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.parentEmail && (
@@ -448,7 +446,7 @@ export default function AdmissionsPage() {
                   </div>
 
                   <div className="sm:col-span-2">
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Residential Home Address <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -457,10 +455,10 @@ export default function AdmissionsPage() {
                       value={formData.homeAddress}
                       onChange={handleInputChange}
                       placeholder="House Number, Street Name, Estate or Area, City/Town"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white focus:outline-none focus:ring-2 ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-xl border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
                         formErrors.homeAddress 
                           ? 'border-red-400 focus:ring-red-400' 
-                          : 'border-slate-300 focus:ring-emerald-700'
+                          : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     ></textarea>
                     {formErrors.homeAddress && (
@@ -472,13 +470,13 @@ export default function AdmissionsPage() {
 
               {/* Section 3: Health & Additional Notes */}
               <div>
-                <h3 className="text-base font-extrabold text-emerald-950 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 flex items-center gap-2">
+                <h3 className="text-base font-extrabold text-emerald-950 dark:text-amber-300 uppercase tracking-wider mb-4 pb-2 border-b border-emerald-900/10 dark:border-slate-800 flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">3</span>
                   <span>Health, Dietary or Learning Considerations</span>
                 </h3>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Special Medical or Dietary Information (Optional)
                   </label>
                   <textarea
@@ -487,7 +485,7 @@ export default function AdmissionsPage() {
                     value={formData.medicalNotes}
                     onChange={handleInputChange}
                     placeholder="e.g., Asthma, food allergies, reading eyeglasses, etc."
-                    className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                   ></textarea>
                 </div>
               </div>
@@ -500,10 +498,10 @@ export default function AdmissionsPage() {
                     name="agreedToTerms"
                     checked={formData.agreedToTerms}
                     onChange={handleInputChange}
-                    className="mt-1 w-4 h-4 rounded text-emerald-800 focus:ring-emerald-700 border-slate-300"
+                    className="mt-1 w-4 h-4 rounded text-emerald-800 focus:ring-emerald-700 border-slate-300 dark:border-slate-700"
                   />
-                  <span className="text-xs text-slate-600 leading-relaxed">
-                    I confirm that the information provided is accurate and truthful. I agree to abide by the Islamic code of conduct and educational guidelines of <strong className="text-emerald-950">ASASUL ISLAM SCHOOL</strong> upon admission.
+                  <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    I confirm that the information provided is accurate and truthful. I agree to abide by the Islamic code of conduct and Nigerian educational guidelines of <strong className="text-emerald-950 dark:text-amber-300">ASASUL ISLAM SCHOOL</strong> upon admission.
                   </span>
                 </label>
                 {formErrors.agreedToTerms && (
@@ -528,14 +526,14 @@ export default function AdmissionsPage() {
       </section>
 
       {/* 4. Frequently Asked Questions Accordion */}
-      <section id="faqs" className="py-20 bg-stone-50 border-t border-slate-200">
+      <section id="faqs" className="py-20 bg-stone-50 dark:bg-[#071510] border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
             badge="Got Questions?"
             arabicSubtitle="الأَسْئِلَةُ الشَّائِعَةُ"
             title="Frequently Asked Questions"
-            subtitle="Find quick answers regarding tuition, curriculum, transportation, Tahfeez schedules, and entrance screening."
+            subtitle="Find quick answers regarding tuition, curriculum, transportation in Nigeria, Tahfeez schedules, and entrance screening."
           />
 
           <div className="space-y-4">
@@ -544,22 +542,22 @@ export default function AdmissionsPage() {
               return (
                 <div
                   key={faq.id}
-                  className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs transition-all"
+                  className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 overflow-hidden shadow-xs transition-all"
                 >
                   <button
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-emerald-800 transition-colors"
+                    className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-amber-300 transition-colors"
                   >
                     <span className="text-sm sm:text-base leading-snug">{faq.question}</span>
-                    <div className={`w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 border border-slate-200 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 bg-emerald-50 text-emerald-800 border-emerald-300' : 'text-slate-400'
+                    <div className={`w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-amber-300 border-emerald-300' : 'text-slate-400'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-200">
+                    <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3 animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}
@@ -574,45 +572,45 @@ export default function AdmissionsPage() {
       {/* Application Success Modal */}
       {isSubmitted && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-100 text-center space-y-5 animate-in zoom-in-95 duration-200">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-100 dark:border-slate-800 text-center space-y-5 animate-in zoom-in-95 duration-200">
             
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center border-4 border-emerald-50">
-              <CheckCircle2 className="w-10 h-10 text-emerald-700" />
+            <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-amber-300 mx-auto flex items-center justify-center border-4 border-emerald-50 dark:border-emerald-900">
+              <CheckCircle2 className="w-10 h-10 text-emerald-700 dark:text-amber-400" />
             </div>
 
             <div>
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200 dark:border-amber-700/50">
                 Application Received Successfully
               </span>
-              <h3 className="text-2xl font-extrabold text-slate-900 mt-3">
+              <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white mt-3">
                 Alhamdulillah! Submission Complete
               </h3>
-              <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                Thank you for applying to <strong className="text-emerald-900">ASASUL ISLAM SCHOOL</strong>. Your application has been logged into our preliminary registry.
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Thank you for applying to <strong className="text-emerald-900 dark:text-amber-300">ASASUL ISLAM SCHOOL</strong>. Your application has been logged into our preliminary registry.
               </p>
             </div>
 
             {/* Reference Card */}
-            <div className="bg-stone-50 rounded-2xl p-4 border border-slate-200 text-left space-y-2 text-xs">
-              <div className="flex justify-between items-center pb-2 border-b border-slate-200">
-                <span className="text-slate-500">Application Reference:</span>
-                <span className="font-mono font-bold text-emerald-800 text-sm">{applicationRef}</span>
+            <div className="bg-stone-50 dark:bg-slate-800/80 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 text-left space-y-2 text-xs">
+              <div className="flex justify-between items-center pb-2 border-b border-slate-200 dark:border-slate-700">
+                <span className="text-slate-500 dark:text-slate-400">Application Reference:</span>
+                <span className="font-mono font-bold text-emerald-800 dark:text-amber-300 text-sm">{applicationRef}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-500">Applicant Name:</span>
-                <span className="font-semibold text-slate-800">{formData.studentFirstName} {formData.studentLastName}</span>
+                <span className="text-slate-500 dark:text-slate-400">Applicant Name:</span>
+                <span className="font-semibold text-slate-800 dark:text-slate-200">{formData.studentFirstName} {formData.studentLastName}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-500">Grade Level:</span>
-                <span className="font-semibold text-slate-800">{formData.gradeApplying}</span>
+                <span className="text-slate-500 dark:text-slate-400">Grade Level:</span>
+                <span className="font-semibold text-slate-800 dark:text-slate-200">{formData.gradeApplying}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-500">Contact Email:</span>
-                <span className="font-semibold text-slate-800">{formData.parentEmail}</span>
+                <span className="text-slate-500 dark:text-slate-400">Contact Email:</span>
+                <span className="font-semibold text-slate-800 dark:text-slate-200">{formData.parentEmail}</span>
               </div>
             </div>
 
-            <p className="text-xs text-slate-500 italic">
+            <p className="text-xs text-slate-500 dark:text-slate-400 italic">
               Our Admissions Secretary will review the submission and reach out via phone/email to schedule the entrance diagnostic assessment.
             </p>
 

@@ -26,7 +26,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 text-slate-800 antialiased font-sans">
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-[#05100c] text-slate-800 dark:text-slate-100 antialiased font-sans transition-colors duration-300">
       <ScrollToTop />
       
       {/* Top Notification Bar */}
@@ -62,9 +62,9 @@ export default function Layout() {
           <button
             onClick={scrollToTop}
             aria-label="Scroll back to top"
-            className="w-10 h-10 rounded-full bg-white text-emerald-900 border border-slate-200 shadow-lg hover:bg-emerald-50 hover:text-emerald-950 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+            className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 text-emerald-900 dark:text-amber-300 border border-slate-200 dark:border-slate-800 shadow-lg hover:bg-emerald-50 dark:hover:bg-slate-800 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
           >
-            <ArrowUp className="w-5 h-5 text-emerald-800" />
+            <ArrowUp className="w-5 h-5 text-emerald-800 dark:text-amber-400" />
           </button>
         )}
       </div>

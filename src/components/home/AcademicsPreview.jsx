@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function AcademicsPreview() {
   return (
-    <section className="py-20 bg-white border-b border-slate-100">
+    <section className="py-20 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader
@@ -20,7 +20,7 @@ export default function AcademicsPreview() {
           {academicProgrammes.map((prog) => (
             <div
               key={prog.id}
-              className="flex flex-col bg-stone-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-emerald-700/50 hover:shadow-xl transition-all duration-300 group"
+              className="flex flex-col bg-stone-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-700/50 dark:hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 group"
             >
               {/* Image Banner */}
               <div className="relative h-48 overflow-hidden">
@@ -40,17 +40,17 @@ export default function AcademicsPreview() {
               {/* Card Body */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-800 transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-800 dark:group-hover:text-amber-300 transition-colors mb-2">
                     {prog.title}
                   </h3>
-                  <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed mb-4">
                     {prog.description}
                   </p>
 
-                  <div className="space-y-1.5 border-t border-slate-200/80 pt-3 mb-4">
+                  <div className="space-y-1.5 border-t border-slate-200/80 dark:border-slate-800 pt-3 mb-4">
                     {prog.highlights.slice(0, 3).map((item, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-1.5 text-xs text-slate-700 dark:text-slate-300">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5" />
                         <span className="line-clamp-1">{item}</span>
                       </div>
                     ))}
@@ -59,7 +59,7 @@ export default function AcademicsPreview() {
 
                 <Link
                   to={`/academics#${prog.id}`}
-                  className="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-emerald-800 text-emerald-900 hover:text-white border border-slate-200 hover:border-emerald-800 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800 hover:bg-emerald-800 dark:hover:bg-emerald-700 text-emerald-900 dark:text-amber-300 hover:text-white border border-slate-200 dark:border-slate-700 hover:border-emerald-800 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
                 >
                   <span>Programme Details</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -79,7 +79,7 @@ export default function AcademicsPreview() {
               Specialized Tahfeez-ul-Qur'an & Tajweed Academy
             </h3>
             <p className="text-sm text-emerald-100/90 max-w-2xl leading-relaxed">
-              We offer both regular classroom memorization tracks and an accelerated intensive Huffaz stream mentored by certified scholars holding authentic Sanad / Ijazah.
+              We offer both regular classroom memorization tracks and an accelerated intensive Nigerian Huffaz stream mentored by certified scholars holding authentic Sanad / Ijazah.
             </p>
           </div>
           <Link

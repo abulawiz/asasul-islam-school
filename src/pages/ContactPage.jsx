@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Send, CheckCircle2, 
-  MessageSquare, Calendar, ShieldCheck, ArrowRight, User 
+  Phone, Mail, MapPin, Clock, Send, CheckCircle2 
 } from 'lucide-react';
-import SectionHeader from '../components/common/SectionHeader';
 import { schoolInfo } from '../data/schoolData';
 
 export default function ContactPage() {
@@ -71,7 +69,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 dark:bg-[#05100c] min-h-screen transition-colors duration-300">
       
       {/* Banner */}
       <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
@@ -84,7 +82,7 @@ export default function ContactPage() {
             Contact Asasul Islam School
           </h1>
           <p className="mt-4 text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            Our admissions counselors and administrative staff are ready to assist you with inquiries, enrollment procedures, or scheduling a visit to our campus.
+            Our admissions counselors and administrative staff in Nigeria are ready to assist you with inquiries, enrollment procedures, or scheduling a visit to our campus.
           </p>
         </div>
       </section>
@@ -93,59 +91,59 @@ export default function ContactPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/80 flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200/80 dark:border-slate-800 flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center shrink-0">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Campus Location</h4>
-              <p className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed">
+              <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Campus Location</h4>
+              <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-semibold leading-relaxed">
                 {schoolInfo.contact.address}
               </p>
-              <p className="text-[11px] text-slate-500 mt-1">{schoolInfo.contact.cityState}, {schoolInfo.contact.country}</p>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">{schoolInfo.contact.cityState}, {schoolInfo.contact.country}</p>
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/80 flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center shrink-0">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200/80 dark:border-slate-800 flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 flex items-center justify-center shrink-0">
               <Phone className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Phone Enquiries</h4>
-              <p className="text-xs sm:text-sm text-slate-800 font-semibold">
+              <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Phone Enquiries</h4>
+              <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-semibold">
                 {schoolInfo.contact.phonePrimary}
               </p>
-              <p className="text-xs text-slate-600 mt-0.5">
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
                 {schoolInfo.contact.phoneSecondary}
               </p>
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/80 flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200/80 dark:border-slate-800 flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 flex items-center justify-center shrink-0">
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Email Inquiries</h4>
-              <p className="text-xs sm:text-sm text-slate-800 font-semibold truncate">
+              <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Email Inquiries</h4>
+              <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-semibold truncate">
                 {schoolInfo.contact.emailAdmissions}
               </p>
-              <p className="text-xs text-slate-600 mt-0.5 truncate">
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 truncate">
                 {schoolInfo.contact.emailGeneral}
               </p>
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/80 flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200/80 dark:border-slate-800 flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center shrink-0">
               <Clock className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Office Hours</h4>
-              <p className="text-xs text-slate-800 font-semibold">
+              <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Office Hours</h4>
+              <p className="text-xs text-slate-800 dark:text-slate-200 font-semibold">
                 Mon – Thu: 7:30 AM – 3:30 PM
               </p>
-              <p className="text-[11px] text-amber-700 font-medium mt-0.5">
+              <p className="text-[11px] text-amber-700 dark:text-amber-400 font-medium mt-0.5">
                 Fri: 7:30 AM – 1:00 PM
               </p>
             </div>
@@ -159,31 +157,31 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Left: Contact Form Interface */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl">
+          <div className="lg:col-span-7 bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
             <div className="mb-8">
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200 dark:border-amber-700/50">
                 Direct Communication
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3">
                 Send Us a Message
               </h2>
-              <p className="text-slate-600 text-xs sm:text-sm mt-1">
+              <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1">
                 Have a question regarding admissions, school bus routes, or curriculum? Fill out the form below.
               </p>
             </div>
 
             {submitted ? (
-              <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-4 animate-in fade-in">
-                <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center">
-                  <CheckCircle2 className="w-8 h-8 text-emerald-700" />
+              <div className="p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-center space-y-4 animate-in fade-in">
+                <div className="w-14 h-14 rounded-full bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-amber-300 mx-auto flex items-center justify-center">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-700 dark:text-amber-400" />
                 </div>
-                <h3 className="text-xl font-bold text-emerald-950">Message Sent Successfully!</h3>
-                <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                <h3 className="text-xl font-bold text-emerald-950 dark:text-white">Message Sent Successfully!</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
                   Thank you for reaching out to Asasul Islam School. Our administrative office will review your enquiry and respond within 24 to 48 business hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="px-5 py-2 rounded-xl bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900 transition"
+                  className="px-5 py-2 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold transition"
                 >
                   Send Another Inquiry
                 </button>
@@ -192,7 +190,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -201,15 +199,15 @@ export default function ContactPage() {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="e.g. Dr. Amina Yusuf"
-                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 focus:outline-none focus:ring-2 ${
-                        formErrors.fullName ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 focus:ring-emerald-700'
+                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
+                        formErrors.fullName ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.fullName && <p className="text-red-500 text-xs mt-1">{formErrors.fullName}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -218,8 +216,8 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="e.g. parent@example.com"
-                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 focus:outline-none focus:ring-2 ${
-                        formErrors.email ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 focus:ring-emerald-700'
+                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
+                        formErrors.email ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.email && <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>}
@@ -228,7 +226,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -237,22 +235,22 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="e.g. +234 803 123 4567"
-                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 focus:outline-none focus:ring-2 ${
-                        formErrors.phone ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 focus:ring-emerald-700'
+                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
+                        formErrors.phone ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                       }`}
                     />
                     {formErrors.phone && <p className="text-red-500 text-xs mt-1">{formErrors.phone}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       Nature of Enquiry
                     </label>
                     <select
                       name="enquiryType"
                       value={formData.enquiryType}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-700"
                     >
                       <option value="General Enquiry">General Enquiry</option>
                       <option value="Admissions & Testing">Admissions & Entrance Assessment</option>
@@ -264,7 +262,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Your Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -273,8 +271,8 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Please tell us how we can help you and your child..."
-                    className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 focus:outline-none focus:ring-2 ${
-                      formErrors.message ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 focus:ring-emerald-700'
+                    className={`w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border bg-stone-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 ${
+                      formErrors.message ? 'border-red-400 focus:ring-red-400' : 'border-slate-300 dark:border-slate-700 focus:ring-emerald-700'
                     }`}
                   ></textarea>
                   {formErrors.message && <p className="text-red-500 text-xs mt-1">{formErrors.message}</p>}
@@ -371,25 +369,25 @@ export default function ContactPage() {
             </div>
 
             {/* Stylized Simulated Map Card */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-emerald-800" />
-                  <h4 className="font-bold text-sm text-slate-900">Campus Location Map</h4>
+                  <MapPin className="w-5 h-5 text-emerald-800 dark:text-amber-400" />
+                  <h4 className="font-bold text-sm text-slate-900 dark:text-white">Campus Location Map</h4>
                 </div>
-                <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="text-[11px] font-bold text-emerald-800 dark:text-amber-300 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
                   Phase II GRA
                 </span>
               </div>
 
               {/* Graphical Simulated Campus Map Preview */}
-              <div className="relative h-48 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-center text-center p-4">
+              <div className="relative h-48 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-center p-4">
                 {/* Background grid lines */}
-                <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
                 
                 {/* Street simulation lines */}
-                <div className="absolute inset-x-0 top-1/2 h-4 bg-slate-300 -translate-y-1/2"></div>
-                <div className="absolute inset-y-0 left-1/3 w-4 bg-slate-300"></div>
+                <div className="absolute inset-x-0 top-1/2 h-4 bg-slate-300 dark:bg-slate-700 -translate-y-1/2"></div>
+                <div className="absolute inset-y-0 left-1/3 w-4 bg-slate-300 dark:bg-slate-700"></div>
 
                 {/* Pin Point */}
                 <div className="relative z-10 flex flex-col items-center animate-bounce">
@@ -401,14 +399,14 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-2 left-2 text-[10px] font-medium text-slate-500 bg-white/90 px-2 py-0.5 rounded shadow-xs">
-                  GPS: 9.0820° N, 8.6753° E
+                <div className="absolute bottom-2 left-2 text-[10px] font-medium text-slate-500 dark:text-slate-400 bg-white/90 dark:bg-slate-900/90 px-2 py-0.5 rounded shadow-xs">
+                  GPS: 9.0820° N, 8.6753° E (Nigeria)
                 </div>
               </div>
 
-              <div className="text-xs text-slate-600 space-y-1 bg-stone-50 p-3 rounded-xl border border-slate-100">
-                <p className="font-semibold text-slate-800">Landmarks & Directions:</p>
-                <p>Located directly opposite the Central Islamic Cultural Center, 300 meters off the Northern Ring Expressway.</p>
+              <div className="text-xs text-slate-600 dark:text-slate-400 space-y-1 bg-stone-50 dark:bg-slate-800/80 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+                <p className="font-semibold text-slate-800 dark:text-slate-200">Landmarks & Directions:</p>
+                <p>Located directly opposite the Central Islamic Mosque, 300 meters off the Northern Ring Expressway.</p>
               </div>
             </div>
 
