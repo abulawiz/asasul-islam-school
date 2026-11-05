@@ -160,7 +160,6 @@ export default function AdmissionsPage() {
           
           <SectionHeader
             badge="Simple 4-Step Process"
-            arabicSubtitle="إِجْرَاءَاتُ القُبُولِ وَالتَّسْجِيلِ"
             title="Admission Procedures"
             subtitle="Our straightforward enrollment pathway designed to ensure the right academic and pastoral fit for every child."
           />
@@ -199,7 +198,6 @@ export default function AdmissionsPage() {
           
           <SectionHeader
             badge="Checklist"
-            arabicSubtitle="شُرُوطُ وَمُتَطَلَّبَاتُ القُبُولِ"
             title="Entry Requirements & Document Checklist"
             subtitle="Please review the age criteria and mandatory Nigerian scholastic documents required for enrollment."
           />
@@ -249,7 +247,6 @@ export default function AdmissionsPage() {
           
           <SectionHeader
             badge="Online Application"
-            arabicSubtitle="نَمُوذَجُ طَلَبِ التَّسْجِيلِ"
             title="Student Admission Application Form"
             subtitle="Fill out the preliminary enrollment application. Our admissions office will process your submission and contact you within 2 business days."
           />
@@ -586,7 +583,6 @@ export default function AdmissionsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Live Application Tracker"
-            arabicSubtitle="مُتَابَعَةُ حَالَةِ طَلَبِ القُبُولِ"
             title="Track Admission Application Status"
             subtitle="Enter your unique Application Reference Number (e.g. AIS-2026-1042) to check screening status, assessment dates, and admissions board updates."
           />
@@ -720,7 +716,6 @@ export default function AdmissionsPage() {
           
           <SectionHeader
             badge="Got Questions?"
-            arabicSubtitle="الأَسْئِلَةُ الشَّائِعَةُ"
             title="Frequently Asked Questions"
             subtitle="Find quick answers regarding tuition, curriculum, transportation in Nigeria, Tahfeez schedules, and entrance screening."
           />

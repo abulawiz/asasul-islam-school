@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function SectionHeader({
   badge,
-  arabicSubtitle,
   title,
   subtitle,
   center = true,
@@ -21,21 +20,13 @@ export default function SectionHeader({
         </div>
       )}
 
-      {arabicSubtitle && (
-        <div className={`font-arabic text-xl md:text-2xl mb-2 font-medium ${
-          light ? 'text-amber-300/90' : 'text-emerald-800 dark:text-amber-300'
-        }`}>
-          {arabicSubtitle}
-        </div>
-      )}
-
       <h2 className={`text-3xl sm:text-4xl lg:text-4xl font-extrabold tracking-tight ${
         light ? 'text-white' : 'text-slate-900 dark:text-white'
       }`}>
         {title}
       </h2>
 
-      {/* Decorative Islamic arch divider */}
+      {/* Decorative accent divider */}
       <div className={`flex items-center gap-2 my-4 ${center ? 'justify-center' : 'justify-start'}`}>
         <span className={`h-px w-10 ${light ? 'bg-amber-400/40' : 'bg-emerald-800/30 dark:bg-emerald-600/40'}`}></span>
         <div className={`w-2 h-2 rotate-45 ${light ? 'bg-amber-400' : 'bg-amber-600 dark:bg-amber-400'}`}></div>

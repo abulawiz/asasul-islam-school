@@ -82,7 +82,6 @@ export default function AcademicsPage() {
           
           <SectionHeader
             badge="Academic Tiers"
-            arabicSubtitle="المَرَاحِلُ الدِّرَاسِيَّةُ"
             title="Comprehensive Educational Stages"
             subtitle="Tailored to each developmental phase, ensuring academic mastery, emotional balance, and spiritual growth in Nigeria."
           />
@@ -162,7 +161,6 @@ export default function AcademicsPage() {
           
           <SectionHeader
             badge="Curricular Breadth"
-            arabicSubtitle="المَنَاهِجُ الدِّرَاسِيَّةُ"
             title="Subjects & Integrated Disciplines"
             subtitle="Discover the rich subject offerings spanning sciences, humanities, modern technologies, and classical Islamic sciences."
           />
@@ -251,17 +249,17 @@ export default function AcademicsPage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl relative">
                 <img
-                  src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=800&auto=format&fit=crop"
-                  alt="Quran recitation and Tajweed"
+                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop"
+                  alt="Student study and recitation"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-center text-white">
-                  <span className="font-arabic text-2xl text-amber-300 block mb-1">
-                    « خَيْرُكُمْ مَنْ تَعَلَّمَ القُرْآنَ وَعَلَّمَهُ »
+                  <span className="text-amber-300 font-bold text-xs uppercase tracking-widest block mb-1">
+                    The Prophetic Educational Standard
                   </span>
-                  <p className="text-xs text-emerald-200">
-                    "The best among you are those who learn the Qur'an and teach it." — Sahih Al-Bukhari
+                  <p className="text-xs text-emerald-100">
+                    "The best among you are those who learn the Quran and teach it." — Sahih Al-Bukhari
                   </p>
                 </div>
               </div>
@@ -278,7 +276,6 @@ export default function AcademicsPage() {
           
           <SectionHeader
             badge="Pedagogy & Practice"
-            arabicSubtitle="طُرُقُ التَّدْرِيسِ وَالمَنْهَجِيَّةُ"
             title="Our Teaching Methodology"
             subtitle="How our certified educators inspire curiosity, critical analysis, and profound moral consciousness."
           />

@@ -40,14 +40,14 @@ export default function Footer() {
         <div className="rounded-2xl bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 border border-amber-400/30 p-6 md:p-8 text-center shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 rounded-full bg-amber-400/5 blur-2xl"></div>
           <div className="relative z-10">
-            <span className="font-arabic text-xl md:text-2xl text-amber-300 font-bold tracking-wide block mb-2">
-              « مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الجَنَّةِ »
+            <span className="text-amber-300 text-xs sm:text-sm font-bold uppercase tracking-widest inline-block mb-2 bg-emerald-950/70 px-3.5 py-1 rounded-full border border-amber-400/30">
+              Foundational Prophetic Maxim
             </span>
-            <p className="text-emerald-100 text-sm md:text-base font-medium max-w-2xl mx-auto italic">
+            <p className="text-emerald-100 text-base md:text-lg font-medium max-w-2xl mx-auto italic mt-1">
               "Whoever takes a path upon which he seeks knowledge, Allah makes a path to Paradise easy for him."
             </p>
             <span className="text-xs text-amber-400/80 font-semibold tracking-wider uppercase mt-1 block">
-              — Sahih Muslim 2699
+              — Sahih Muslim
             </span>
           </div>
         </div>

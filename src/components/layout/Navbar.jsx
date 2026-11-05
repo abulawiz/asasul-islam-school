@@ -4,7 +4,6 @@ import {
   Menu, X, ChevronDown, GraduationCap, BookOpen, 
   Sparkles, Award, Shield, ArrowRight, Info, Sun, Moon
 } from 'lucide-react';
-import { schoolInfo } from '../../data/schoolData';
 import { useTheme } from '../../context/ThemeContext';
 
 export default function Navbar() {
@@ -95,8 +94,8 @@ export default function Navbar() {
               <span className="text-xs font-semibold tracking-widest text-emerald-700 dark:text-emerald-400 uppercase leading-tight mt-0.5">
                 School · Nigeria
               </span>
-              <span className="font-arabic text-[11px] text-slate-500 dark:text-slate-400 leading-none mt-0.5">
-                {schoolInfo.arabicName}
+              <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 leading-none mt-0.5">
+                Excellence in Faith & Knowledge
               </span>
             </div>
           </Link>

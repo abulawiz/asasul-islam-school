@@ -1,6 +1,6 @@
 # ASASUL ISLAM SCHOOL — Complete Full-Stack Web Application
 
-A modern, visually stunning, fully functional educational institution web application for **ASASUL ISLAM SCHOOL (مَدْرَسَةُ أَسَاسِ الإِسْلاَمِ)**. Built with React.js, Tailwind CSS v4, Lucide React icons, React Router, and a dedicated **Node.js + Express + SQLite** backend with JWT authentication and EduPortal management.
+A modern, visually stunning, fully functional educational institution web application for **ASASUL ISLAM SCHOOL (NIGERIA)**. Built with React.js, Tailwind CSS v4, Lucide React icons, React Router, and a dedicated **Node.js + Express + SQLite** backend with JWT authentication and EduPortal management.
 
 Designed with an elegant, Islamic educational identity utilizing an **Emerald Green**, **Alabaster White**, and **Soft Gold** design palette, authentic Nigerian educational photography, accessible Dark & Light modes, and agency-level UI/UX polish.
 

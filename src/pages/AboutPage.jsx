@@ -104,8 +104,8 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="font-arabic text-xl text-amber-300 block mb-1">
-                    « رَبِّ زِدْنِي عِلْمًا »
+                  <span className="text-amber-300 font-bold text-sm tracking-wider uppercase block mb-1">
+                    Divine Supplication for Scholarly Growth
                   </span>
                   <p className="text-xs text-emerald-100 font-medium">
                     "My Lord, increase me in knowledge." — Surah Ta-Ha [20:114]
@@ -124,7 +124,6 @@ export default function AboutPage() {
           
           <SectionHeader
             badge="Institutional Philosophy"
-            arabicSubtitle="رُؤْيَتُنَا وَرِسَالَتُنَا"
             title="Vision & Mission"
             subtitle="The strategic North Star guiding every pedagogical decision, moral standard, and student support mechanism."
             light={true}
@@ -175,13 +174,12 @@ export default function AboutPage() {
           
           <SectionHeader
             badge="Moral Foundation"
-            arabicSubtitle="قِيَمُنَا الأَسَاسِيَّةُ"
             title="Our Guiding Core Values"
             subtitle="The foundational ethos inculcated into every lesson, assembly, and interpersonal relationship on our campus."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreValues.map((val) => {
+            {coreValues.map((val, idx) => {
               const Icon = iconMap[val.icon] || HeartHandshake;
               return (
                 <div
@@ -192,8 +190,8 @@ export default function AboutPage() {
                     <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800 flex items-center justify-center group-hover:bg-emerald-800 group-hover:text-amber-300 transition-colors">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-arabic text-lg text-emerald-800 dark:text-amber-300 font-bold">
-                      {val.arabic}
+                    <span className="text-xs font-mono font-bold text-slate-400 dark:text-slate-600">
+                      0{idx + 1}
                     </span>
                   </div>
 
@@ -218,7 +216,6 @@ export default function AboutPage() {
           
           <SectionHeader
             badge="Our Journey"
-            arabicSubtitle="تَارِيخُ المَدْرَسَةِ"
             title="The History of Asasul Islam School"
             subtitle="A humble beginning fueled by sincere intention, evolving into a distinguished Nigerian institution of learning."
           />
@@ -287,9 +284,9 @@ export default function AboutPage() {
 
               {/* Message Column */}
               <div className="lg:col-span-8 p-8 sm:p-12 space-y-5">
-                <div className="font-arabic text-xl text-emerald-800 dark:text-amber-300">
-                  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-                </div>
+                <span className="text-xs font-bold text-emerald-800 dark:text-amber-300 uppercase tracking-widest bg-emerald-50 dark:bg-emerald-950 px-3.5 py-1.5 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block">
+                  Official Welcome Address
+                </span>
 
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                   Welcome from the Principal & Director of Academics
@@ -318,8 +315,8 @@ export default function AboutPage() {
                     </div>
                     <div className="text-xs text-slate-500 dark:text-slate-400">Principal, Asasul Islam School</div>
                   </div>
-                  <div className="font-arabic text-emerald-800 dark:text-amber-300 text-base">
-                    والسلام عليكم ورحمة الله وبركاته
+                  <div className="text-xs font-semibold text-emerald-800 dark:text-amber-300">
+                    Warm Regards & Blessings
                   </div>
                 </div>
 
@@ -337,7 +334,6 @@ export default function AboutPage() {
           
           <SectionHeader
             badge="Educational Stewardship"
-            arabicSubtitle="إِدَارَةُ المَدْرَسَةِ"
             title="School Leadership & Academic Heads"
             subtitle="Meet our dedicated Nigerian administrators, curriculum leaders, and scholars who steer our educational standards."
           />

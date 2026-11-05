@@ -30,9 +30,8 @@ export default function GalleryPreview() {
         
         <SectionHeader
           badge="Moments & Memories"
-          arabicSubtitle="مَعْرِضُ الصُّوَرِ"
           title="Glimpses of Vibrant Campus Life"
-          subtitle="Explore the lively atmosphere of our daily assemblies, Tajweed halaqahs, lab discoveries, and athletic triumphs in Nigeria."
+          subtitle="Explore the lively atmosphere of our daily assemblies, study circles, lab discoveries, and athletic triumphs in Nigeria."
         />
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">

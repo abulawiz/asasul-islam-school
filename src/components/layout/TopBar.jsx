@@ -33,12 +33,10 @@ export default function TopBar() {
             </div>
           </div>
 
-          {/* Right: Islamic motto & Portal Access */}
+          {/* Right: Motto & Portal Access */}
           <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-            <div className="hidden sm:flex items-center gap-2 text-amber-300/90 font-medium">
-              <span className="font-arabic text-sm">العِلْمُ نُورٌ</span>
-              <span className="text-emerald-700">·</span>
-              <span>Knowledge is Light</span>
+            <div className="hidden sm:flex items-center gap-2 text-amber-300 font-semibold tracking-wide">
+              <span>Faith · Knowledge · Character</span>
             </div>
 
             <div className="flex items-center gap-2 ml-auto md:ml-0">

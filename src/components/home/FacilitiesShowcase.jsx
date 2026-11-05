@@ -14,9 +14,8 @@ export default function FacilitiesShowcase() {
         
         <SectionHeader
           badge="Learning Environment"
-          arabicSubtitle="المَرَافِقُ المَدْرَسِيَّةُ"
-          title="Designed for Academic & Spiritual Flourishing"
-          subtitle="Explore our purpose-built campus infrastructure equipped with modern science laboratories, quiet Quranic sanctuaries, and recreational arenas."
+          title="Designed for Academic & Moral Flourishing"
+          subtitle="Explore our purpose-built campus infrastructure equipped with modern science laboratories, quiet study sanctuaries, and recreational arenas."
         />
 
         {/* Category Tabs */}

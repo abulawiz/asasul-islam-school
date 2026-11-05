@@ -11,7 +11,6 @@ export default function AcademicsPreview() {
         
         <SectionHeader
           badge="Academic Excellence"
-          arabicSubtitle="بَرَامِجُنَا الأَكَادِيمِيَّةُ"
           title="Progressive Learning Pathways"
           subtitle="From early childhood discovery to senior college preparatory tracks, our academic framework nurtures each pupil's intellectual and spiritual evolution."
         />

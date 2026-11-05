@@ -25,7 +25,6 @@ export default function WhyChooseUs() {
         
         <SectionHeader
           badge="The Asasul Islam Difference"
-          arabicSubtitle="لِمَاذَا تَخْتَارُ مَدْرَسَتَنَا؟"
           title="Why Discerning Families Choose Us"
           subtitle="We combine academic rigor, moral rectitude, and forward-looking skills within a supportive Nigerian community dedicated to raising tomorrow's ethical pioneers."
         />
