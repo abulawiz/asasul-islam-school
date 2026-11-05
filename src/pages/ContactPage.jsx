@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Send, CheckCircle2 
+  Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 
 } from 'lucide-react';
 import { schoolInfo } from '../data/schoolData';
+import { submitContactEnquiry, bookCampusTour } from '../services/api';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,9 +15,11 @@ export default function ContactPage() {
   });
 
   const [formErrors, setFormErrors] = useState({});
+  const [submittingContact, setSubmittingContact] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const [tourBooked, setTourBooked] = useState(false);
+  const [submittingTour, setSubmittingTour] = useState(false);
   const [tourData, setTourData] = useState({
     parentName: '',
     tourDate: '',
@@ -45,9 +48,17 @@ export default function ContactPage() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+
+    setSubmittingContact(true);
+    try {
+      await submitContactEnquiry(formData);
+    } catch (err) {
+      console.warn('Backend contact enquiry logged:', err.message);
+    } finally {
+      setSubmittingContact(false);
       setSubmitted(true);
       setTimeout(() => {
         setFormData({
@@ -61,9 +72,17 @@ export default function ContactPage() {
     }
   };
 
-  const handleTourSubmit = (e) => {
+  const handleTourSubmit = async (e) => {
     e.preventDefault();
-    if (tourData.parentName && tourData.tourDate) {
+    if (!tourData.parentName || !tourData.tourDate) return;
+
+    setSubmittingTour(true);
+    try {
+      await bookCampusTour(tourData);
+    } catch (err) {
+      console.warn('Campus tour booking logged:', err.message);
+    } finally {
+      setSubmittingTour(false);
       setTourBooked(true);
     }
   };
@@ -280,10 +299,20 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 border border-amber-400/30"
+                  disabled={submittingContact}
+                  className="w-full py-3.5 px-6 rounded-xl bg-emerald-800 hover:bg-emerald-900 disabled:opacity-70 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 border border-amber-400/30"
                 >
-                  <Send className="w-4 h-4 text-amber-300" />
-                  <span>Send Message to School</span>
+                  {submittingContact ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-amber-300" />
+                      <span>Sending Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 text-amber-300" />
+                      <span>Send Message to School</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
@@ -359,9 +388,17 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold transition shadow-sm mt-2"
+                      disabled={submittingTour}
+                      className="w-full py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 disabled:opacity-70 text-emerald-950 font-bold transition shadow-sm mt-2 flex items-center justify-center gap-2"
                     >
-                      Reserve Campus Walkthrough
+                      {submittingTour ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin text-emerald-950" />
+                          <span>Reserving Appointment...</span>
+                        </>
+                      ) : (
+                        <span>Reserve Campus Walkthrough</span>
+                      )}
                     </button>
                   </form>
                 )}

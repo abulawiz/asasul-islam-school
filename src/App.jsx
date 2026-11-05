@@ -10,6 +10,7 @@ import NewsEventsPage from './pages/NewsEventsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import PortalPage from './pages/PortalPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="news/:id" element={<NewsDetailPage />} />
             <Route path="gallery" element={<GalleryPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="portal" element={<PortalPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

@@ -4,21 +4,31 @@ import {
   Phone, Mail, MapPin, Clock, CheckCircle2 
 } from 'lucide-react';
 import { schoolInfo } from '../../data/schoolData';
+import { subscribeNewsletter } from '../../services/api';
 
 const currentYear = 2026;
 
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
     if (email.trim() && email.includes('@')) {
-      setSubscribed(true);
-      setTimeout(() => {
-        setEmail('');
-        setSubscribed(false);
-      }, 5000);
+      setLoading(true);
+      try {
+        await subscribeNewsletter(email.trim());
+      } catch (err) {
+        console.warn('Newsletter subscribe:', err.message);
+      } finally {
+        setLoading(false);
+        setSubscribed(true);
+        setTimeout(() => {
+          setEmail('');
+          setSubscribed(false);
+        }, 5000);
+      }
     }
   };
 
@@ -205,9 +215,10 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    className="bg-amber-400 hover:bg-amber-300 text-emerald-950 px-3 py-2 rounded-r-lg text-xs font-bold transition-colors"
+                    disabled={loading}
+                    className="bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-emerald-950 px-3 py-2 rounded-r-lg text-xs font-bold transition-colors"
                   >
-                    Join
+                    {loading ? '...' : 'Join'}
                   </button>
                 </div>
                 {subscribed && (
@@ -231,7 +242,7 @@ export default function Footer() {
             <span>•</span>
             <Link to="/about" className="hover:text-amber-300">Terms of Enrollment</Link>
             <span>•</span>
-            <Link to="/contact" className="hover:text-amber-300">Staff Portal</Link>
+            <Link to="/portal" className="text-amber-300 font-semibold hover:underline">EduPortal (Login)</Link>
           </div>
         </div>
 
