@@ -44,7 +44,7 @@ router.post('/tours', (req, res) => {
 
   try {
     db.prepare(`
-      INSERT INTO campus_tours (parent_name, tour_date, preferred_time)
+      INSERT INTO campus_tours (parent_name, tour_date, preferred_time, status)
       VALUES (?, ?, ?, ?)
     `).run(parentName.trim(), tourDate, preferredTime || '10:00 AM', 'Scheduled');
 

@@ -11,9 +11,9 @@ export default function GalleryPage() {
   const categories = [
     'All',
     'Campus Life',
-    'Tahfeez & Islamic Life',
-    'STEM & Laboratories',
     'Classroom Activities',
+    'STEM & Laboratories',
+    'Moral & Scholastic Life',
     'Sports & Athletics'
   ];
 

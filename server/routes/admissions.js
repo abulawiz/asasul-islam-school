@@ -28,8 +28,14 @@ router.post('/apply', (req, res) => {
 
   try {
     const year = new Date().getFullYear();
-    const randomCode = Math.floor(1000 + Math.random() * 9000);
-    const ref_number = `AIS-${year}-${randomCode}`;
+    let ref_number = '';
+    let exists = true;
+    while (exists) {
+      const randomCode = Math.floor(1000 + Math.random() * 9000);
+      ref_number = `AIS-${year}-${randomCode}`;
+      const check = db.prepare('SELECT id FROM admissions WHERE ref_number = ?').get(ref_number);
+      if (!check) exists = false;
+    }
 
     const stmt = db.prepare(`
       INSERT INTO admissions (

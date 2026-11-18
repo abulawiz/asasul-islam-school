@@ -49,7 +49,7 @@ export default function PrincipalMessage() {
               </h2>
 
               <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-                As-salaamu 'Alaykum wa Rahmatullah wa Barakatuh. Welcome to Asasul Islam School. Every child entrusted to our care represents a sacred trust (<em className="text-amber-200">Amanah</em>). In a rapidly modernizing Nigerian society, parents often face an agonizing compromise between moral integrity and academic competitiveness.
+                Peace, mercy, and blessings be upon you. Welcome to Asasul Islam School. Every child entrusted to our care represents a sacred trust (<em className="text-amber-200">Amanah</em>). In a rapidly modernizing Nigerian society, parents often face an agonizing compromise between moral integrity and academic competitiveness.
               </p>
 
               <p className="text-emerald-200/90 text-sm leading-relaxed">

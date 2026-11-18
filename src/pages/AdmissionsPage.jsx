@@ -798,12 +798,29 @@ export default function AdmissionsPage() {
               Our Admissions Secretary will review the submission and reach out via phone/email to schedule the entrance diagnostic assessment.
             </p>
 
-            <button
-              onClick={resetForm}
-              className="w-full py-3 px-6 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm shadow-md transition-colors"
-            >
-              Done / Return to Admissions
-            </button>
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <button
+                onClick={() => {
+                  const refToTrack = applicationRef;
+                  setTrackerRef(refToTrack);
+                  resetForm();
+                  setTimeout(() => {
+                    const trackerElem = document.getElementById('tracker');
+                    if (trackerElem) trackerElem.scrollIntoView({ behavior: 'smooth' });
+                    checkAdmissionStatus(refToTrack).then(res => setTrackedApp(res.application)).catch(() => {});
+                  }, 150);
+                }}
+                className="flex-1 py-3 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold text-xs shadow-md transition-colors"
+              >
+                Track Status Now →
+              </button>
+              <button
+                onClick={resetForm}
+                className="flex-1 py-3 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs shadow-md transition-colors"
+              >
+                Done
+              </button>
+            </div>
           </div>
         </div>
       )}

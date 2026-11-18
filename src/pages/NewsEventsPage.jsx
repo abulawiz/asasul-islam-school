@@ -10,7 +10,7 @@ export default function NewsEventsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Academic', 'Islamic Events', 'Sports', 'Announcements'];
+  const categories = ['All', 'Academic', 'Moral & Cultural Events', 'Sports', 'Announcements'];
 
   const filteredNews = newsAndEvents.filter((item) => {
     const matchesCategory = selectedCategory === 'All' || item.category.toLowerCase().includes(selectedCategory.toLowerCase());

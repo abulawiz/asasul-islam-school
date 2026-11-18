@@ -150,6 +150,7 @@ export default function Navbar() {
                           <Link
                             key={idx}
                             to={item.path}
+                            onClick={() => setDropdownOpen(null)}
                             className="flex items-center gap-3 p-2.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-900 dark:hover:text-amber-300 transition-colors group/item"
                           >
                             <div className="w-7 h-7 rounded-md bg-emerald-100/60 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 flex items-center justify-center group-hover/item:bg-emerald-800 group-hover/item:text-amber-300 transition-colors">

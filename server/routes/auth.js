@@ -16,9 +16,9 @@ router.post('/login', (req, res) => {
 
   try {
     const trimmed = identifier.trim();
-    // Look up by portal_id or email
+    // Look up by portal_id or email (case-insensitive)
     const user = db.prepare(`
-      SELECT * FROM users WHERE portal_id = ? OR email = ? COLLATE NOCASE
+      SELECT * FROM users WHERE portal_id = ? COLLATE NOCASE OR email = ? COLLATE NOCASE
     `).get(trimmed, trimmed);
 
     if (!user) {
