@@ -95,3 +95,58 @@ export async function subscribeNewsletter(email) {
   if (!res.ok) throw new Error(data.error || 'Failed to subscribe');
   return data;
 }
+
+export async function getAllAdmissions(token) {
+  const res = await fetch(`${API_BASE}/admissions`, {
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to fetch admissions');
+  return data;
+}
+
+export async function getAllEnquiries(token) {
+  const res = await fetch(`${API_BASE}/contact/admin/enquiries`, {
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to fetch enquiries');
+  return data;
+}
+
+export async function getAllTours(token) {
+  const res = await fetch(`${API_BASE}/contact/admin/tours`, {
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to fetch campus tours');
+  return data;
+}
+
+export async function updateTourStatus(token, id, status) {
+  const res = await fetch(`${API_BASE}/contact/admin/tours/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ status })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to update tour status');
+  return data;
+}
+
+export async function updateEnquiryStatus(token, id, status) {
+  const res = await fetch(`${API_BASE}/contact/admin/enquiries/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ status })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to update enquiry status');
+  return data;
+}

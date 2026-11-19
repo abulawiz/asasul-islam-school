@@ -64,9 +64,9 @@ router.get('/admin-overview', authenticateToken, requireAdmin, (req, res) => {
     const totalTours = db.prepare('SELECT COUNT(*) as count FROM campus_tours').get().count;
     const totalSubscribers = db.prepare('SELECT COUNT(*) as count FROM subscribers').get().count;
 
-    const recentAdmissions = db.prepare('SELECT * FROM admissions ORDER BY id DESC LIMIT 8').all();
-    const recentEnquiries = db.prepare('SELECT * FROM enquiries ORDER BY id DESC LIMIT 5').all();
-    const upcomingTours = db.prepare('SELECT * FROM campus_tours ORDER BY id DESC LIMIT 5').all();
+    const recentAdmissions = db.prepare('SELECT * FROM admissions ORDER BY id DESC LIMIT 100').all();
+    const recentEnquiries = db.prepare('SELECT * FROM enquiries ORDER BY id DESC LIMIT 100').all();
+    const upcomingTours = db.prepare('SELECT * FROM campus_tours ORDER BY id DESC LIMIT 100').all();
 
     res.json({
       stats: {

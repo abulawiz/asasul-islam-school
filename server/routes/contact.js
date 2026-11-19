@@ -102,4 +102,42 @@ router.get('/admin/tours', authenticateToken, requireAdmin, (req, res) => {
   }
 });
 
+// PATCH /api/contact/admin/tours/:id (Admin only)
+router.patch('/admin/tours/:id', authenticateToken, requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  try {
+    const existing = db.prepare('SELECT id FROM campus_tours WHERE id = ?').get(id);
+    if (!existing) {
+      return res.status(404).json({ error: 'Tour booking not found' });
+    }
+
+    db.prepare('UPDATE campus_tours SET status = ? WHERE id = ?').run(status || 'Completed', id);
+    res.json({ success: true, message: 'Campus tour status updated.' });
+  } catch (err) {
+    console.error('Update tour status error:', err);
+    res.status(500).json({ error: 'Failed to update tour status.' });
+  }
+});
+
+// PATCH /api/contact/admin/enquiries/:id (Admin only)
+router.patch('/admin/enquiries/:id', authenticateToken, requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  try {
+    const existing = db.prepare('SELECT id FROM enquiries WHERE id = ?').get(id);
+    if (!existing) {
+      return res.status(404).json({ error: 'Enquiry not found' });
+    }
+
+    db.prepare('UPDATE enquiries SET status = ? WHERE id = ?').run(status || 'Resolved', id);
+    res.json({ success: true, message: 'Enquiry status updated.' });
+  } catch (err) {
+    console.error('Update enquiry status error:', err);
+    res.status(500).json({ error: 'Failed to update enquiry status.' });
+  }
+});
+
 export default router;
