@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   Target, Compass, ShieldCheck, 
-  HeartHandshake, BookOpen, Heart 
+  HeartHandshake, BookOpen, Heart,
+  Award, GraduationCap, Sparkles
 } from 'lucide-react';
 import SectionHeader from '../components/common/SectionHeader';
 import { leadership, coreValues, schoolInfo } from '../data/schoolData';
@@ -11,7 +12,10 @@ const iconMap = {
   ShieldCheck: ShieldCheck,
   BookOpen: BookOpen,
   Heart: Heart,
-  Target: Target
+  Target: Target,
+  Award: Award,
+  GraduationCap: GraduationCap,
+  Sparkles: Sparkles
 };
 
 export default function AboutPage() {
@@ -98,8 +102,8 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
-                  alt="Asasul Islam School Nigerian Students in Class"
+                  src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop"
+                  alt="Scholarly Resource Library at Asasul Islam School"
                   className="w-full h-[420px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
@@ -258,12 +262,21 @@ export default function AboutPage() {
               {/* Photo & Bio Column */}
               <div className="lg:col-span-4 bg-emerald-950 p-8 text-white flex flex-col justify-between">
                 <div>
-                  <div className="rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-lg mb-6">
+                  <div className="rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-lg mb-6 relative h-64 bg-emerald-950 flex items-center justify-center">
                     <img
                       src={principal.image}
-                      alt={principal.name}
-                      className="w-full h-80 object-cover object-top"
+                      alt="Office of the Principal Administration Hall"
+                      className="w-full h-full object-cover opacity-40"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/50 to-transparent"></div>
+                    <div className="relative z-10 text-center flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-2xl bg-amber-400/20 text-amber-300 border-2 border-amber-400/50 flex items-center justify-center mb-2 shadow-lg">
+                        <Award className="w-8 h-8 text-amber-300" />
+                      </div>
+                      <span className="text-[11px] font-bold text-amber-300 uppercase tracking-widest bg-emerald-900/90 px-3 py-1 rounded-full border border-amber-400/40">
+                        Office of the Principal
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-extrabold text-white">{principal.name}</h3>
@@ -344,14 +357,29 @@ export default function AboutPage() {
                 key={idx}
                 className="bg-stone-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-700/40 dark:hover:border-emerald-500/40 hover:shadow-xl transition-all duration-300 flex flex-col group"
               >
-                <div className="h-64 overflow-hidden relative">
+                <div className="h-64 overflow-hidden relative flex items-center justify-center bg-emerald-950">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/60 to-emerald-950/30"></div>
+                  
+                  {/* Institutional Crest Insignia */}
+                  <div className="relative z-10 text-center flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-2xl bg-amber-400/20 text-amber-300 border-2 border-amber-400/50 flex items-center justify-center mb-2 shadow-lg group-hover:scale-110 transition-transform">
+                      {leader.icon && iconMap[leader.icon] ? (
+                        React.createElement(iconMap[leader.icon], { className: "w-8 h-8 text-amber-300" })
+                      ) : (
+                        <Award className="w-8 h-8 text-amber-300" />
+                      )}
+                    </div>
+                    <span className="text-[10px] font-bold text-emerald-200 uppercase tracking-widest bg-emerald-900/80 px-2.5 py-0.5 rounded-full border border-emerald-700/60">
+                      Leadership Seal
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 right-3 text-white z-10">
                     <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider block">
                       {leader.role}
                     </span>

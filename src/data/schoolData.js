@@ -49,7 +49,7 @@ export const heroSlides = [
     ctaPrimaryLink: "/admissions",
     ctaSecondary: "Explore Academics",
     ctaSecondaryLink: "/academics",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1600&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -60,7 +60,7 @@ export const heroSlides = [
     ctaPrimaryLink: "/academics",
     ctaSecondary: "Campus Gallery",
     ctaSecondaryLink: "/gallery",
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=1600&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const heroSlides = [
     ctaPrimaryLink: "/contact",
     ctaSecondary: "Our Facilities",
     ctaSecondaryLink: "/about",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1600&auto=format&fit=crop"
   }
 ];
 
@@ -166,7 +166,7 @@ export const academicProgrammes = [
       "Basic Dua' and daily Islamic morning adhkar",
       "Nurturing child-friendly play zones and safety protocols"
     ],
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=900&auto=format&fit=crop",
     color: "from-emerald-700 to-emerald-900"
   },
   {
@@ -181,7 +181,7 @@ export const academicProgrammes = [
       "Islamic Studies (Tawheed, Fiqh, Seerah & Akhlaq)",
       "Robotics, coding clubs, sports, and Nigerian spelling bees"
     ],
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=900&auto=format&fit=crop",
     color: "from-teal-700 to-emerald-950"
   },
   {
@@ -196,7 +196,7 @@ export const academicProgrammes = [
       "Intermediate Tahfeez with contextual Tafseer discussions",
       "Debating, leadership prefectship, and community service"
     ],
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=900&auto=format&fit=crop",
     color: "from-emerald-800 to-stone-900"
   },
   {
@@ -211,7 +211,7 @@ export const academicProgrammes = [
       "Leadership mentoring, career guidance & university counseling",
       "Graduation Capstone: Completion of selected Quran Juz' / Ijazah"
     ],
-    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=900&auto=format&fit=crop",
     color: "from-emerald-900 to-slate-950"
   }
 ];
@@ -222,7 +222,7 @@ export const facilities = [
     title: "School Assembly Sanctuary & Multi-Purpose Hall",
     category: "Spiritual Center",
     description: "A tranquil, modern hall that accommodates all students and staff for daily congregational prayers, morning assemblies, and peaceful Quran recitation circles.",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=900&auto=format&fit=crop",
     features: ["Capacity for 800+ students", "Dedicated ablution facilities", "Acoustically treated auditorium", "Integrated library of Islamic & ethical texts"]
   },
   {
@@ -246,7 +246,7 @@ export const facilities = [
     title: "Resource Library & Media Hub",
     category: "Academic Resources",
     description: "An extensive repository housing over 15,000 volumes across general sciences, literature, Nigerian history, classical texts, and audio-visual stations.",
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=900&auto=format&fit=crop",
     features: ["15,000+ indexed books & research journals", "Quiet individual study cubicles", "Digital cataloging & e-reader tablets", "Dedicated Early Years story corner"]
   },
   {
@@ -273,28 +273,32 @@ export const leadership = [
     role: "Principal & Director of Academics",
     qualifications: "Ph.D. in Educational Administration (ABU Zaria), B.A. Islamic Studies, PGDE",
     bio: "With over 24 years of scholastic leadership in WAEC/NECO and Islamic school governance in Nigeria, Dr. Ibrahim oversees academic rigor, instructional quality, and faculty development.",
-    image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop",
+    icon: "Award"
   },
   {
     name: "Hajia Maryam Farooq",
     role: "Vice Principal (Secondary School)",
     qualifications: "M.Ed. Curriculum Studies (Univ. of Lagos), B.Sc. Mathematics, Certified WAEC Examiner",
     bio: "Hajia Maryam spearheads STEM initiatives, curriculum alignment, and secondary school examination success while mentoring female students in leadership.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600&auto=format&fit=crop",
+    icon: "GraduationCap"
   },
   {
     name: "Sheikh Abdul-Rahman Al-Baqir",
     role: "Head of Quranic & Islamic Studies",
     qualifications: "Certified Islamic Scholar, B.A. Usul-ud-Deen, National Qira'at Evaluator",
     bio: "A renowned Nigerian educator, Sheikh Abdul-Rahman has mentored over 300 students across Nigeria with pedagogical compassion and Tajweed accuracy.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=600&auto=format&fit=crop",
+    icon: "BookOpen"
   },
   {
     name: "Mrs. Khadijah Sulaiman",
     role: "Head of Primary & Early Years",
     qualifications: "B.Ed. Early Childhood Education (Univ. of Ibadan), Montessori Certified Practitioner",
     bio: "Mrs. Khadijah champions early literacy, child psychology, and playful learning environments that allow young learners to flourish with confidence and moral discipline.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=600&auto=format&fit=crop",
+    icon: "Sparkles"
   }
 ];
 
@@ -308,7 +312,7 @@ export const newsAndEvents = [
     venue: "Main School Auditorium",
     excerpt: "Nigerian students from all four houses compete across categories in full memorization, Tajweed precision, and voice melodiousness.",
     content: "The annual Inter-House Quran competition is the hallmark spiritual event on the Asasul Islam School calendar. Pupils from Basic 2 through Senior Secondary 3 will present memorized chapters before an esteemed panel of visiting scholars. Parents, community elders, and alumni are warmly invited to witness our children's devotion and mastery. Prizes and scholarships will be awarded across all tiers.",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=1000&auto=format&fit=crop",
     featured: true
   },
   {
@@ -356,7 +360,7 @@ export const newsAndEvents = [
     venue: "Classroom Blocks & Conference Pavilion",
     excerpt: "One-on-one academic feedback conferences with class teachers, learning coaches, and guidance counselors.",
     content: "Parents and guardians will have scheduled private discussions with subject educators to review mid-term diagnostic performance, character observations, and learning retention metrics. Refreshments will be served.",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000&auto=format&fit=crop",
     featured: false
   }
 ];
@@ -364,66 +368,66 @@ export const newsAndEvents = [
 export const galleryItems = [
   {
     id: 1,
-    title: "Morning Assembly & National Anthem",
+    title: "School Campus Architecture & Courtyard",
     category: "Campus Life",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop",
-    caption: "Nigerian students gathering for morning reflections, inspiring admonitions, and community updates in the quadrangle."
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+    caption: "Our serene school architecture featuring expansive courtyards, bright classrooms, and landscaped grounds."
   },
   {
     id: 2,
-    title: "Focused Reading & Study Hall",
+    title: "Central Library & Quranic Study Sanctuary",
     category: "Moral & Scholastic Life",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop",
-    caption: "Students engaged in concentrated study, Tajweed reading, and reflective learning under caring instructors."
+    image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=1200&auto=format&fit=crop",
+    caption: "A dedicated sanctuary for Tajweed recitation, Muraja'ah revision, and reflective Quranic study."
   },
   {
     id: 3,
-    title: "Chemistry & Molecular Experiments",
+    title: "Chemistry & Molecular Research Lab",
     category: "STEM & Laboratories",
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop",
-    caption: "Senior secondary science students conducting chemical titration and analysis under instructor supervision."
+    caption: "Modern laboratory equipment and chemical apparatus for rigorous scientific investigation and WAEC practicals."
   },
   {
     id: 4,
-    title: "Collaborative Study & Discussion Group",
+    title: "Interactive Smart Classroom & Desks",
     category: "Classroom Activities",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-    caption: "Students engaging in peer group problem-solving and presentation rehearsals in our multimedia classroom."
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+    caption: "Well-ventilated, ergonomic classrooms equipped with multimedia whiteboards and collaborative seating."
   },
   {
     id: 5,
     title: "Junior Robotics & ICT Coding Workshop",
     category: "STEM & Laboratories",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-    caption: "Hands-on programming and sensor-based robotics challenges designed to foster computational logic."
+    caption: "High-speed networked computer workstations supporting programming, robotics, and computational design."
   },
   {
     id: 6,
-    title: "Early Years Montessori Discovery",
+    title: "Early Years Montessori Discovery Center",
     category: "Classroom Activities",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop",
-    caption: "Nursery pupils exploring tactile numeracy cards, color recognition, and phonics in bright, stimulating spaces."
+    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=1200&auto=format&fit=crop",
+    caption: "Stimulating sensory play zones with tactile Montessori blocks, early phonics cards, and numeracy sets."
   },
   {
     id: 7,
-    title: "Annual Sports Day Sprint Relays",
+    title: "Annual Sports Grounds & Football Pitch",
     category: "Sports & Athletics",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop",
-    caption: "Healthy athletic competition building teamwork, physical vigor, and resilient character."
+    caption: "Regulation sports fields promoting athletic discipline, physical stamina, and inter-house football matches."
   },
   {
     id: 8,
-    title: "Active Classroom Hand-Raising & Engagement",
-    category: "Classroom Activities",
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop",
-    caption: "Enthusiastic primary pupils participating actively in mathematics and general science lectures."
+    title: "Academic Honors, Certificates & Graduation Cap",
+    category: "Campus Life",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    caption: "Celebrating scholastic excellence, certified Quran memorization milestones, and university admissions."
   },
   {
     id: 9,
-    title: "Modern School Courtyard & Classrooms",
+    title: "Administrative Quadrangle & Landscaped Lawns",
     category: "Campus Life",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop",
-    caption: "Our serene school architecture featuring expansive courtyards, bright classrooms, and landscaped grounds."
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    caption: "Tranquil botanical surroundings providing an inspiring environment for study, contemplation, and moral growth."
   }
 ];
 

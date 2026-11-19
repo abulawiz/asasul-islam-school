@@ -249,8 +249,8 @@ export default function AcademicsPage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl relative">
                 <img
-                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop"
-                  alt="Student study and recitation"
+                  src="https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=900&auto=format&fit=crop"
+                  alt="Holy Quran on book stand in serene sanctuary"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/40 to-transparent"></div>

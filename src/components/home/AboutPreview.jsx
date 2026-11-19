@@ -15,8 +15,8 @@ export default function AboutPreview() {
             {/* Primary Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
               <img
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000&auto=format&fit=crop"
-                alt="Nigerian Students at Asasul Islam School"
+                src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop"
+                alt="Asasul Islam School Campus Architecture"
                 className="w-full h-[400px] sm:h-[480px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>

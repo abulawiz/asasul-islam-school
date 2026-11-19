@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import TopBar from './TopBar';
 import Navbar from './Navbar';
+import LeftSidebar from './LeftSidebar';
 import Footer from './Footer';
 import ScrollToTop from '../common/ScrollToTop';
-import { ArrowUp, GraduationCap } from 'lucide-react';
+import { ArrowUp, GraduationCap, Menu } from 'lucide-react';
 
 export default function Layout() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const location = useLocation();
 
@@ -26,14 +28,33 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-[#05100c] text-slate-800 dark:text-slate-100 antialiased font-sans transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-[#05100c] text-slate-800 dark:text-slate-100 antialiased font-sans transition-colors duration-300 relative">
       <ScrollToTop />
       
       {/* Top Notification Bar */}
       <TopBar />
 
       {/* Main Header / Sticky Navigation */}
-      <Navbar />
+      <Navbar onOpenSidebar={() => setIsSidebarOpen(true)} />
+
+      {/* Functional Left-Hand Navigation Sidebar Drawer */}
+      <LeftSidebar 
+        isOpen={isSidebarOpen} 
+        onClose={() => setIsSidebarOpen(false)} 
+      />
+
+      {/* Docked Left Edge Sidebar Trigger Button */}
+      <button
+        onClick={() => setIsSidebarOpen(true)}
+        aria-label="Open left navigation sidebar"
+        className="fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-emerald-900/90 hover:bg-emerald-800 text-amber-300 py-3.5 px-2 rounded-r-2xl shadow-xl border-y border-r border-amber-400/40 backdrop-blur-md transition-all hover:pr-3.5 group flex flex-col items-center gap-1.5 focus:outline-none"
+        title="Click to open left navigation sidebar with icons"
+      >
+        <Menu className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform" />
+        <span className="text-[10px] font-black tracking-widest uppercase [writing-mode:vertical-rl] rotate-180 text-white/90">
+          Menu
+        </span>
+      </button>
 
       {/* Main Page Content */}
       <main className="flex-1">

@@ -13,26 +13,30 @@ export default function PrincipalMessage() {
         <div className="rounded-3xl bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white overflow-hidden shadow-2xl border border-amber-400/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             
-            {/* Left: Principal's Portrait */}
-            <div className="lg:col-span-5 relative h-full min-h-[360px] sm:min-h-[440px]">
+            {/* Left: Administration Crest & Hall */}
+            <div className="lg:col-span-5 relative h-full min-h-[360px] sm:min-h-[440px] flex items-center justify-center bg-emerald-950 overflow-hidden">
               <img
                 src={principal.image}
-                alt={principal.name}
-                className="w-full h-full object-cover object-top"
+                alt="Office of the Principal - Asasul Islam School"
+                className="w-full h-full object-cover opacity-40 absolute inset-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent lg:hidden"></div>
-              
-              {/* Badge overlay on image */}
-              <div className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8 bg-emerald-900/90 backdrop-blur-md p-4 rounded-2xl border border-amber-400/40">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0 border border-amber-400/40">
-                    <Award className="w-5 h-5 text-amber-300" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm text-white">{principal.name}</h4>
-                    <p className="text-xs text-amber-300/90">{principal.role}</p>
-                  </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/60 to-emerald-950/40"></div>
+
+              {/* Central Executive Insignia */}
+              <div className="relative z-10 text-center flex flex-col items-center p-6">
+                <div className="w-20 h-20 rounded-3xl bg-amber-400/20 text-amber-300 border-2 border-amber-400/50 flex items-center justify-center mb-3 shadow-2xl backdrop-blur-xs">
+                  <Award className="w-10 h-10 text-amber-300" />
                 </div>
+                <span className="text-xs font-bold text-amber-300 uppercase tracking-widest bg-emerald-900/90 px-3.5 py-1 rounded-full border border-amber-400/40 shadow-sm">
+                  Executive Seal
+                </span>
+                <h4 className="font-extrabold text-base text-white mt-3">{principal.name}</h4>
+                <p className="text-xs text-emerald-200 mt-0.5">{principal.role}</p>
+              </div>
+
+              {/* Bottom Badge */}
+              <div className="absolute bottom-4 left-4 right-4 bg-emerald-900/80 backdrop-blur-md py-2 px-3 rounded-xl border border-amber-400/30 text-center z-10">
+                <p className="text-[11px] text-amber-200/90 font-medium">ABU Zaria · 24+ Years Institutional Leadership</p>
               </div>
             </div>
 
