@@ -83,14 +83,10 @@ export default function AdmissionsPage() {
     setIsSubmitting(true);
     try {
       const res = await submitAdmissionApplication(formData);
-      setApplicationRef(res.ref_number || `AIS-2026-${Math.floor(1000 + Math.random() * 9000)}`);
+      setApplicationRef(res.ref_number);
       setIsSubmitted(true);
     } catch (err) {
-      console.warn('Backend admission submission fallback:', err.message);
-      // Even if offline/backend fails, generate local reference so applicant UX is never broken
-      const fallbackRef = `AIS-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-      setApplicationRef(fallbackRef);
-      setIsSubmitted(true);
+      setSubmitError(err.message || 'Unable to submit your application. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

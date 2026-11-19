@@ -17,9 +17,11 @@ export default function ContactPage() {
   const [formErrors, setFormErrors] = useState({});
   const [submittingContact, setSubmittingContact] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [contactError, setContactError] = useState('');
 
   const [tourBooked, setTourBooked] = useState(false);
   const [submittingTour, setSubmittingTour] = useState(false);
+  const [tourError, setTourError] = useState('');
   const [tourData, setTourData] = useState({
     parentName: '',
     tourDate: '',
@@ -52,23 +54,22 @@ export default function ContactPage() {
     e.preventDefault();
     if (!validate()) return;
 
+    setContactError('');
     setSubmittingContact(true);
     try {
       await submitContactEnquiry(formData);
+      setSubmitted(true);
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        enquiryType: 'General Enquiry',
+        message: ''
+      });
     } catch (err) {
-      console.warn('Backend contact enquiry logged:', err.message);
+      setContactError(err.message || 'Unable to send your message. Please try again.');
     } finally {
       setSubmittingContact(false);
-      setSubmitted(true);
-      setTimeout(() => {
-        setFormData({
-          fullName: '',
-          email: '',
-          phone: '',
-          enquiryType: 'General Enquiry',
-          message: ''
-        });
-      }, 1000);
     }
   };
 
@@ -76,14 +77,15 @@ export default function ContactPage() {
     e.preventDefault();
     if (!tourData.parentName || !tourData.tourDate) return;
 
+    setTourError('');
     setSubmittingTour(true);
     try {
       await bookCampusTour(tourData);
+      setTourBooked(true);
     } catch (err) {
-      console.warn('Campus tour booking logged:', err.message);
+      setTourError(err.message || 'Unable to reserve your tour. Please try again.');
     } finally {
       setSubmittingTour(false);
-      setTourBooked(true);
     }
   };
 
@@ -297,6 +299,9 @@ export default function ContactPage() {
                   {formErrors.message && <p className="text-red-500 text-xs mt-1">{formErrors.message}</p>}
                 </div>
 
+                {contactError && (
+                  <p role="alert" className="text-sm text-red-600 dark:text-red-400">{contactError}</p>
+                )}
                 <button
                   type="submit"
                   disabled={submittingContact}
@@ -386,6 +391,9 @@ export default function ContactPage() {
                       </select>
                     </div>
 
+                    {tourError && (
+                      <p role="alert" className="text-xs text-red-200">{tourError}</p>
+                    )}
                     <button
                       type="submit"
                       disabled={submittingTour}
