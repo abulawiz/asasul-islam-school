@@ -50,9 +50,9 @@ export default function HeroSection() {
                   alt={slide.title}
                   className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-10000"
                 />
-                {/* Rich Islamic Emerald & Black Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-950 via-emerald-950/85 to-emerald-900/40"></div>
-                <div className="absolute inset-0 bg-radial-at-c from-transparent via-emerald-950/40 to-emerald-950"></div>
+                {/* Rich Islamic Emerald Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-950/80 to-emerald-950/35"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-transparent to-emerald-950/40"></div>
               </div>
 
               {/* Slide Content */}

@@ -49,7 +49,7 @@ export const heroSlides = [
     ctaPrimaryLink: "/admissions",
     ctaSecondary: "Explore Academics",
     ctaSecondaryLink: "/academics",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/campus-entrance.jpg"
   },
   {
     id: 2,
@@ -368,10 +368,10 @@ export const newsAndEvents = [
 export const galleryItems = [
   {
     id: 1,
-    title: "School Campus Architecture & Courtyard",
+    title: "Grand Campus Entrance & Administration Gate",
     category: "Campus Life",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
-    caption: "Our serene school architecture featuring expansive courtyards, bright classrooms, and landscaped grounds."
+    image: "/images/campus-entrance.jpg",
+    caption: "The majestic entrance archway welcoming students, faculty, and visiting families to our serene academic grounds."
   },
   {
     id: 2,
