@@ -11,23 +11,23 @@ const currentYear = 2026;
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [subscribeError, setSubscribeError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (email.trim() && email.includes('@')) {
+      setSubscribeError('');
       setLoading(true);
       try {
         await subscribeNewsletter(email.trim());
+        setSubscribed(true);
+        setEmail('');
+        setTimeout(() => setSubscribed(false), 5000);
       } catch (err) {
-        console.warn('Newsletter subscribe:', err.message);
+        setSubscribeError(err.message || 'Unable to subscribe right now. Please try again.');
       } finally {
         setLoading(false);
-        setSubscribed(true);
-        setTimeout(() => {
-          setEmail('');
-          setSubscribed(false);
-        }, 5000);
       }
     }
   };
@@ -222,11 +222,12 @@ export default function Footer() {
                   </button>
                 </div>
                 {subscribed && (
-                  <p className="text-[11px] text-amber-300 flex items-center gap-1 mt-1">
+                  <p role="status" className="text-[11px] text-amber-300 flex items-center gap-1 mt-1">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     Thank you! Subscribed to termly updates.
                   </p>
                 )}
+                {subscribeError && <p role="alert" className="text-[11px] text-red-300 mt-1">{subscribeError}</p>}
               </form>
             </div>
 
